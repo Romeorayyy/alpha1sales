@@ -5,6 +5,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: fixed;
+  top: 0;
 }
 
 .links {
