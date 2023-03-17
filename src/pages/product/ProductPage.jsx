@@ -3,11 +3,13 @@ import { useParams } from "react-router-dom";
 import { ShopContext } from "../../context/shop-context";
 import { PRODUCTS } from "../../products";
 import styles from "./ProductPage.module.css"; // Import the styles
+import { useNavigate } from "react-router-dom";
 
 const ProductPage = () => {
   const { id } = useParams();
   const product = PRODUCTS.find((p) => p.id === Number(id));
-
+  const navigate = useNavigate();
+  
   const {
     cartItems,
     addToCart,
@@ -39,12 +41,24 @@ const ProductPage = () => {
           />
           <button onClick={() => addToCart(product.id)}>+</button>
         </div>
-        <button
-          className={styles.addToCartBttn}
-          onClick={() => addToCart(id)}
-        >
-          Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
-        </button>
+        <div>
+          <button
+            className={styles.addToCartBttn}
+            onClick={() => addToCart(Number(id))}
+          >
+            Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
+          </button>
+         <button
+            className={styles.addToCartBttn}
+            onClick={() => {
+              navigate("/cart");
+            }}
+          >
+            {" "}
+            Buy Now{" "}
+          </button>
+
+        </div>
       </div>
     </div>
   );
