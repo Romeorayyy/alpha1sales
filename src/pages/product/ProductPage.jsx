@@ -1,27 +1,22 @@
 import React, { useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { ShopContext } from "../../context/shop-context";
 import { PRODUCTS } from "../../products";
-import styles from "./ProductPage.module.css"; // Import the styles
-import { useNavigate } from "react-router-dom";
+import styles from "./ProductPage.module.css";
 
 const ProductPage = () => {
   const { id } = useParams();
   const product = PRODUCTS.find((p) => p.id === Number(id));
   const navigate = useNavigate();
-  
-  const {
-    cartItems,
-    addToCart,
-    updateCartItemCount,
-    removeFromCart,
-  } = useContext(ShopContext);
-
-  if (!product) {
-    return <h2>Product not found.</h2>;
-  }
-
+  const { cartItems, addToCart, updateCartItemCount, removeFromCart } = useContext(ShopContext);
   const cartItemCount = cartItems[id];
+
+  if (!product) return <h2>Product not found.</h2>;
+
+  const handleBuyNowClick = () => {
+    if (cartItemCount === 0) addToCart(Number(id));
+    navigate("/cart");
+  };
 
   return (
     <div className={styles.productPage}>
@@ -35,29 +30,17 @@ const ProductPage = () => {
           <input
             type="number"
             value={cartItems[product.id]}
-            onChange={(e) =>
-              updateCartItemCount(parseInt(e.target.value), product.id)
-            }
+            onChange={(e) => updateCartItemCount(parseInt(e.target.value), product.id)}
           />
           <button onClick={() => addToCart(product.id)}>+</button>
         </div>
         <div>
-          <button
-            className={styles.addToCartBttn}
-            onClick={() => addToCart(Number(id))}
-          >
+          <button className={styles.addToCartBttn} onClick={() => addToCart(Number(id))}>
             Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
           </button>
-         <button
-            className={styles.addToCartBttn}
-            onClick={() => {
-              navigate("/cart");
-            }}
-          >
-            {" "}
-            Buy Now{" "}
+          <button className={styles.addToCartBttn} onClick={handleBuyNowClick}>
+            Buy Now
           </button>
-
         </div>
       </div>
     </div>
