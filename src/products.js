@@ -10,7 +10,7 @@ import product8 from "./assets/products1/8.webp";
 export const PRODUCTS = [
   {
     id: 1,
-    productName: "Vape 1",
+    productName: "randy",
     price: 45.0,
     productImage: product1,
     description: "this is the description for product 1"

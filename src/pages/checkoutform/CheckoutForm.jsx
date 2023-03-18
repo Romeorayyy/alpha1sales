@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./CheckoutForm.css";
-import {Cart} from '../cart/cart'
+import { Cart } from "../cart/cart";
+import "../cart/cart.css"; // Import the cart.css file here
 
 const CheckoutForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  
+
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {

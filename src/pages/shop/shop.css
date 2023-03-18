@@ -1,53 +1,123 @@
-.shopTitle {
-  margin-top: 100px;
-  text-align: center;
-  font-size: 40px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 3rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.shopTitle {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
 .products {
-  width: 100%;
-  height: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   place-items: center;
+  margin-top: 50px;
 }
 
 .product {
   border-radius: 15px;
-  width: 300px;
-  height: 350px;
-  margin: 100px;
+  width: 100%;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.product img {
-  width: 400px;
-}
-
-.product .description {
   text-align: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+  transition: all 0.3s ease-in-out;
 }
 
 .product:hover {
-  transition: 0.3s ease-in;
-  cursor: pointer;
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.product h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
 .addToCartBttn {
   background-color: transparent;
   border: 2px solid rgb(19, 19, 19);
   min-width: 100px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 10px;
   border-radius: 15px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .addToCartBttn:hover {
   background-color: rgb(19, 19, 19);
   color: white;
-  cursor: pointer;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  .shopTitle {
+    margin-top: 30px;
+    font-size: 2rem;
+  }
+
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .product {
+    height: 350px;
+    padding: 10px;
+  }
+
+  .product img {
+    margin-bottom: 10px;
+  }
+
+  .product h3 {
+    font-size: 1.2rem;
+  }
+
+  .product p {
+    font-size: 1rem;
+  }
+
+  .addToCartBttn {
+    min-width: 80px;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
 }
