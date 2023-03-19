@@ -24,3 +24,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 python-tools/
+
+# Ignore find.py and yarn-build.py files
+find.py
+yarn-build.py
