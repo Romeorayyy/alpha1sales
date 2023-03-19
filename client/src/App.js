@@ -7,6 +7,8 @@ import Cart from "./pages/cart/cart";
 import ProductPage from "./pages/product/ProductPage";
 import CheckoutForm from "./pages/checkoutform/CheckoutForm"; // Import the CheckoutForm component
 import { ShopContextProvider } from "./context/shop-context";
+import ThankYou from "./pages/ThankYou/ThankYou";
+
 
 function App() {
   return (
@@ -19,7 +21,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/product/:id" element={<ProductPage />} />
-            <Route path="/checkout" element={<CheckoutForm />} /> {/* Add the route for the CheckoutForm */}
+            <Route path="/checkout" element={<CheckoutForm />} />
+            <Route path="/thankyou" element={<ThankYou />} /> {/* Add the route for the Thank You page */}
           </Routes>
         </Router>
       </ShopContextProvider>

@@ -5,9 +5,9 @@ import "./CheckoutForm.css";
 
 const CheckoutForm = () => {
   const { cartItems, getTotalCartAmount, checkout } = useContext(ShopContext);
-  const [name, setName] = useState("John Doe");
-  const [email, setEmail] = useState("john.doe@example.com");
-  const [phoneNumber, setPhoneNumber] = useState("1234567890");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -52,6 +52,7 @@ const CheckoutForm = () => {
         <input
           type="text"
           id="name"
+          placeholder="Enter your name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
@@ -60,6 +61,7 @@ const CheckoutForm = () => {
         <input
           type="email"
           id="email"
+          placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -68,6 +70,7 @@ const CheckoutForm = () => {
         <input
           type="tel"
           id="phone-number"
+          placeholder="Enter your phone number"
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
           required

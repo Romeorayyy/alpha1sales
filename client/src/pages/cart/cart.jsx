@@ -8,6 +8,15 @@ import "./cart.css";
 const Cart = () => {
   const { cartItems, getTotalCartAmount, removeFromCart } = useContext(ShopContext);
 
+  if (getTotalCartAmount() === 0) {
+    return (
+      <div className="cart-empty">
+        <h1>Your cart is empty</h1>
+        <button onClick={() => window.location.href = '/'}>Continue shopping</button>
+      </div>
+    );
+  }
+
   return (
     <div className="cart">
       <div className="cart-items">
