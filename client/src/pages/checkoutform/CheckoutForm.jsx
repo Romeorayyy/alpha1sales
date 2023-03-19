@@ -1,7 +1,8 @@
 import React, { useState, useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
 import { useNavigate } from "react-router-dom";
-import "./CheckoutForm.css";
+import "../../App.css"
+
 
 const CheckoutForm = () => {
   const { cartItems, getTotalCartAmount, checkout } = useContext(ShopContext);
