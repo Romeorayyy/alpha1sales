@@ -17,30 +17,32 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/send-email', async (req, res) => {
-  const { email, name, lastName, phoneNumber, cartItems, totalAmount } = req.body;
+  const { email, name, phoneNumber, itemsHtml, totalAmount } = req.body;
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: email,
     subject: 'New Order',
-    text: `
-      Name: ${name}
-      Last Name: ${lastName}
-      Phone Number: ${phoneNumber}
-      Email: ${email}
-      Total Amount: $${totalAmount}
-      Items: ${JSON.stringify(cartItems)}
+    html: `
+      <div>
+        <p>Name: ${name}</p>
+        <p>Phone Number: ${phoneNumber}</p>
+        <p>Email: ${email}</p>
+        <p>Total Amount: $${totalAmount}</p>
+        <h3>Items:</h3>
+        ${itemsHtml}
+      </div>
     `,
   };
 
   try {
     await transporter.sendMail(mailOptions);
-    res.send('Email sent successfully and this is a test');
+    res.send('Email sent successfully');
   } catch (error) {
     console.error('Failed to send email:', error);
     res.status(500).send('Failed to send email');
   }
-}); 
+});
 
 // Serve the static files from the client/build folder
 app.use(express.static(path.join(__dirname, '../client/build')));
