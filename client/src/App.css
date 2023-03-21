@@ -11,6 +11,12 @@
   padding: 0;
 }
 
+body {
+  font-family: Arial,Helvetica,sans-serif;
+  margin: 32px auto 0;
+  padding-top: 3rem;
+}
+
 .App {
   width: 100%;
   min-height: 100vh;
@@ -43,10 +49,6 @@
   font-size: 25px;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  padding-top: 3rem;
-}
 
 .container {
   max-width: 1200px;
