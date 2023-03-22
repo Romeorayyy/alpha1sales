@@ -106,7 +106,7 @@ const ProductPage = () => {
           <button
             className={styles.addToCartBttn}
             onClick={() => {
-              incrementCartItem(id, selectedOption);
+              incrementCartItem(product.id, selectedOption);
             }}
           >
             Add to Cart
