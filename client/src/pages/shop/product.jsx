@@ -6,7 +6,12 @@ export const Product = (props) => {
   const { id, productName, price, productImage } = props.data;
   const { addToCart, cartItems } = useContext(ShopContext);
 
-  const cartItemCount = cartItems[id];
+  const cartItemCount = cartItems[id].quantity;
+
+  const defaultOption = props.data.options.find(
+    (option) => option.name === props.data.defaultOptionName
+  );
+  const displayPrice = defaultOption ? defaultOption.price : price;
 
   return (
     <div className="product">
@@ -16,7 +21,7 @@ export const Product = (props) => {
           <p>
             <b>{productName}</b>
           </p>
-          <p> ${price}</p>
+          <p> ${displayPrice}</p>
         </div>
       </Link>
       <button className="addToCartBttn" onClick={() => addToCart(id)}>
