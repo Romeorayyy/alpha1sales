@@ -1,11 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { ShopContext } from "../../context/shop-context";
 import { CartItem } from "../cart/cart-item";
 import { PRODUCTS } from "../../products";
 import CheckoutForm from "../checkoutform/CheckoutForm";
-import "../../App.css";
+
+//import "../../App.css";
 
 const Cart = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { cartItems, getTotalCartAmount, removeFromCart } = useContext(ShopContext);
 
   if (getTotalCartAmount() === 0) {
