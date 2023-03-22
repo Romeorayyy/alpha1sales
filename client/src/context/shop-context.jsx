@@ -3,46 +3,74 @@ import { PRODUCTS } from "../products";
 
 export const ShopContext = createContext(null);
 
-const defaultCart = Object.fromEntries(PRODUCTS.map(product => {
-  const defaultOption = product.options.find(option => option.name === product.defaultOptionName);
-  return [product.id, { quantity: 0, price: defaultOption ? defaultOption.price : product.price }];
-}));
-
-
 export const ShopContextProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState(defaultCart);
+  const [cartItems, setCartItems] = useState({});
 
   const getTotalCartAmount = () =>
-    Object.entries(cartItems).reduce(
-      (total, [itemId, {quantity, price}]) =>
-        total + PRODUCTS.find((product) => product.id === Number(itemId)).price * quantity,
+    Object.values(cartItems).reduce(
+      (total, { quantity, option }) => total + option.price * quantity,
       0
     );
 
-    const addToCart = (itemId, selectedOption, quantity = 1) => {
-      const currentItem = cartItems[itemId];
-      const price = selectedOption ? selectedOption.price : currentItem.price;
-      setCartItems((prev) => ({
-        ...prev,
-        [itemId]: { quantity: currentItem.quantity + quantity, price },
-      }));
-    };    
-         
-  const removeFromCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: {quantity: prev[itemId].quantity - 1, price: prev[itemId].price} }));
+    const addToCart = (productId, selectedOption, quantity = 1) => {
+      setCartItems((prevCartItems) => {
+        const updatedCartItems = { ...prevCartItems };
+        const productKey = `${productId}_${selectedOption ? selectedOption.name : "default"}`;
+    
+        if (updatedCartItems[productKey]) {
+          updatedCartItems[productKey].quantity += quantity;
+        } else {
+          updatedCartItems[productKey] = {
+            id: productId,
+            optionName: selectedOption.name, // Add this line
+            option: selectedOption,
+            quantity,
+          };
+        }
+    
+        return updatedCartItems;
+      });
+    };
+    
+
+  const removeFromCart = (productId, selectedOption) => {
+    setCartItems((prevCartItems) => {
+      const updatedCartItems = { ...prevCartItems };
+      const productKey = `${productId}_${selectedOption.name}`;
+
+      if (updatedCartItems[productKey]) {
+        updatedCartItems[productKey].quantity -= 1;
+        if (updatedCartItems[productKey].quantity <= 0) {
+          delete updatedCartItems[productKey];
+        }
+      }
+
+      return updatedCartItems;
+    });
   };
 
-  const updateCartItemCount = (newAmount, itemId) =>
-    setCartItems((prev) => ({ ...prev, [itemId]: {quantity: newAmount, price: prev[itemId].price} }));
+  const updateCartItemCount = (newAmount, productId, selectedOption) => {
+    setCartItems((prevCartItems) => {
+      const updatedCartItems = { ...prevCartItems };
+      const productKey = `${productId}_${selectedOption.name}`;
+
+      if (newAmount <= 0) {
+        delete updatedCartItems[productKey];
+      } else {
+        updatedCartItems[productKey].quantity = newAmount;
+      }
+
+      return updatedCartItems;
+    });
+  };
 
   const checkout = () => {
-    setCartItems(defaultCart);
+    setCartItems({});
   };
 
-  const incrementCartItem = (itemId, selectedOption) => {
-    addToCart(itemId, selectedOption, 1);
+  const incrementCartItem = (productId, selectedOption) => {
+    addToCart(productId, selectedOption, 1);
   };
-  
 
   const contextValue = {
     cartItems,
@@ -53,7 +81,6 @@ export const ShopContextProvider = ({ children }) => {
     getTotalCartAmount,
     checkout,
   };
-  
 
   return <ShopContext.Provider value={contextValue}>{children}</ShopContext.Provider>;
 };

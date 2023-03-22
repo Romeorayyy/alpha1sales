@@ -10,31 +10,25 @@ const ProductPage = () => {
   const { cartItems, addToCart, updateCartItemCount, removeFromCart, incrementCartItem } = useContext(ShopContext);
   const product = PRODUCTS.find((p) => p.id === Number(id));
 
-  const cartItemCount = cartItems[id];
-
-const [selectedOption, setSelectedOption] = useState(() => {
-  if (product && product.options) {
-    const defaultOption = product.options.find(option => option.name === product.defaultOptionName);
-    return defaultOption || product.options[0];
-  }
-  return null;
-});
-
+  const [selectedOption, setSelectedOption] = useState(() => {
+    if (product && product.options) {
+      const defaultOption = product.options.find(option => option.name === product.defaultOptionName);
+      return defaultOption || product.options[0];
+    }
+    return null;
+  });
 
   if (!product) return <h2>Product not found.</h2>;
 
   const handleBuyNowClick = () => {
-    if (cartItemCount === 0) {
-      addToCart(Number(id), selectedOption, 1);
-    }
+    incrementCartItem(Number(id), selectedOption);
     navigate("/cart");
-  };  
-  
+  };
 
   const handleOptionChange = (e) => {
-    const optionIndex = e.target.value;
-    setSelectedOption(product.options[optionIndex]);
-  };
+    const optionName = e.target.value;
+    setSelectedOption(product.options.find((option) => option.name === optionName));
+  };  
 
   const renderAdditionalInfo = () => {
     const { additionalinfotitle1, additionalinfodescription1, additionalinfotitle2, additionalinfodescription2, additionalinfotitle3, additionalinfodescription3, additionalinfotitle4, additionalinfodescription4 } = product;
@@ -81,26 +75,28 @@ const [selectedOption, setSelectedOption] = useState(() => {
         {product.options && (
           <div className={styles.optionSelector}>
             <label htmlFor="productOptions">Choose an option:</label>
-            <select         name="productOptions"
-          id="productOptions"
-          value={selectedOption ? product.options.indexOf(selectedOption) : 0}
-          onChange={handleOptionChange}
-        >
-          {product.options.map((option, index) => (
-            <option key={option.name} value={index}>
-              {option.name}
-            </option>
-          ))}
-        </select>
+            <select
+              name="productOptions"
+              id="productOptions"
+              value={selectedOption ? selectedOption.name : ""}
+              onChange={handleOptionChange}
+            >
+              {product.options.map((option) => (
+                <option key={option.name} value={option.name}>
+                  {option.name}
+                </option>
+              ))}
+            </select>
+
       </div>
     )}
     <div className={styles.quantityControl}>
-      <button onClick={() => removeFromCart(product.id)}>-</button>
+    <button onClick={() => removeFromCart(product.id, selectedOption)}>-</button>
       <input 
         type="number" 
-        value={cartItems[product.id].quantity}
+        value={cartItems[product.id]?.quantity || 0}
         onChange={(e) => updateCartItemCount(parseInt(e.target.value), product.id)} />
-      <button onClick={() => addToCart(product.id, selectedOption ? selectedOption.price : null)}>+</button>
+      <button onClick={() => addToCart(product.id, selectedOption)}>+</button>
     </div>
     <div>
       <button

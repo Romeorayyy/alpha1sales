@@ -20,15 +20,15 @@ const Cart = () => {
   return (
     <div className="cart">
       <div className="cart-items">
-        {Object.entries(cartItems).map(([itemId, item]) => {
+        {Object.entries(cartItems).map(([itemKey, item]) => {
           const quantity = item.quantity;
 
           if (quantity === 0) {
             return null;
           }
 
-          const product = PRODUCTS.find((product) => product.id === Number(itemId));
-          return quantity > 0 ? <CartItem key={itemId} data={product} /> : null;
+          const product = item.id && PRODUCTS.find((product) => product.id === item.id);
+          return product && quantity > 0 ? <CartItem key={itemKey} data={product} item={item} /> : null;
         })}
       </div>
       <div className="cart-total">

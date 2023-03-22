@@ -5,10 +5,10 @@ export const CartItem = (props) => {
   const { id, productName, productImage, options } = props.data;
   const { cartItems, addToCart, removeFromCart, updateCartItemCount } = useContext(ShopContext);
 
-  const price = cartItems[id].price;
-  const quantity = cartItems[id].quantity;
-
-  const selectedOption = options.find((option) => option.price === price);
+  const item = props.item;
+  const selectedOption = options.find(option => option.name === item.optionName) || { name: "N/A", price: 0 };
+  const price = selectedOption.price;
+  const quantity = item.quantity;
 
   return (
     <div className="cartItem">
@@ -27,10 +27,10 @@ export const CartItem = (props) => {
 
         <p> Price: ${price.toFixed(2)}</p>
         <div className="countHandler">
-          <button onClick={() => removeFromCart(id)}> - </button>
+          <button onClick={() => removeFromCart(id, selectedOption)}> - </button>
           <input
             value={quantity}
-            onChange={(e) => updateCartItemCount(Number(e.target.value), id)}
+            onChange={(e) => updateCartItemCount(Number(e.target.value), id, selectedOption)}
           />
           <button onClick={() => addToCart(id, selectedOption)}> + </button>
         </div>

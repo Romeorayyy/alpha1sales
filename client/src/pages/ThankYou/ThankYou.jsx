@@ -5,7 +5,7 @@ const ThankYou = () => {
     <div style={{ textAlign: "center", marginTop: "50px" }}>
       <h2>Thank you!</h2>
       <p>Your submission has been received. We'll be in touch soon.</p>
-      <button style={{ padding: "10px 20px", marginTop: "20px" }}>
+      <button onClick={() => (window.location.href = "/")} style={{ padding: "10px 20px", marginTop: "20px" }}>
         Browse More Products
       </button>
     </div>
