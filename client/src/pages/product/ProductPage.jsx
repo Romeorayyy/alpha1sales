@@ -21,9 +21,12 @@ const ProductPage = () => {
   if (!product) return <h2>Product not found.</h2>;
 
   const handleBuyNowClick = () => {
-    incrementCartItem(Number(id), selectedOption);
+    if (!cartItems[`${product.id}_${selectedOption.name}`]) {
+      incrementCartItem(Number(id), selectedOption);
+    }
     navigate("/cart");
   };
+  
 
   const handleOptionChange = (e) => {
     const optionName = e.target.value;
