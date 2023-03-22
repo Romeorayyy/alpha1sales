@@ -1,10 +1,13 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ShopContext } from "../../context/shop-context";
 import { PRODUCTS } from "../../products";
 import styles from "./ProductPage.module.css";
 
 const ProductPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { id } = useParams();
   const navigate = useNavigate();
   const { cartItems, addToCart, updateCartItemCount, removeFromCart, incrementCartItem } = useContext(ShopContext);
