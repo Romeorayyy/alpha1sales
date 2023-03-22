@@ -12,26 +12,25 @@ export const ShopContextProvider = ({ children }) => {
       0
     );
 
-    const addToCart = (productId, selectedOption, quantity = 1) => {
-      setCartItems((prevCartItems) => {
-        const updatedCartItems = { ...prevCartItems };
-        const productKey = `${productId}_${selectedOption ? selectedOption.name : "default"}`;
-    
-        if (updatedCartItems[productKey]) {
-          updatedCartItems[productKey].quantity += quantity;
-        } else {
-          updatedCartItems[productKey] = {
-            id: productId,
-            optionName: selectedOption.name, // Add this line
-            option: selectedOption,
-            quantity,
-          };
-        }
-    
-        return updatedCartItems;
-      });
-    };
-    
+  const addToCart = (productId, selectedOption, quantity = 1) => {
+    setCartItems((prevCartItems) => {
+      const updatedCartItems = { ...prevCartItems };
+      const productKey = `${productId}_${selectedOption ? selectedOption.name : "default"}`;
+
+      if (updatedCartItems[productKey]) {
+        updatedCartItems[productKey].quantity += quantity;
+      } else {
+        updatedCartItems[productKey] = {
+          id: productId,
+          optionName: selectedOption.name,
+          option: selectedOption,
+          quantity,
+        };
+      }
+
+      return updatedCartItems;
+    });
+  };
 
   const removeFromCart = (productId, selectedOption) => {
     setCartItems((prevCartItems) => {
