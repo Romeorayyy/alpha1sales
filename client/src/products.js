@@ -51,7 +51,8 @@ export const PRODUCTS = [
     options: [
       { name: "Master Case", price: 2000 },
       { name: "Single Box", price: 120 },
-      { name: "Test Box", price: 70.0 }
+      { name: "Test Box", price: 70.0 },
+      { name: "another Test Box", price: 900.0 }
     ],
     defaultOptionName: "Single Box", 
     category: [

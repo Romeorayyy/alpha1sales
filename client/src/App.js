@@ -22,7 +22,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/product/:id" element={<ProductPage />} />
             <Route path="/checkout" element={<CheckoutForm />} />
-            <Route path="/thankyou" element={<ThankYou />} /> {/* Add the route for the Thank You page */}
+            <Route path="/thankyou" element={<ThankYou />} />
           </Routes>
         </Router>
       </ShopContextProvider>

@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
 import { useNavigate } from "react-router-dom";
-import "../../App.css";
+import "./checkoutform.css";
 import { PRODUCTS } from "../../products";
 
 const CheckoutForm = () => {
@@ -11,11 +11,11 @@ const CheckoutForm = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const navigate = useNavigate();
 
-  const cartItemsWithDetails = Object.entries(cartItems).reduce((acc, [itemId, quantity]) => {
-    const product = PRODUCTS.find((product) => product.id === Number(itemId));
-    acc[itemId] = { ...product, quantity };
+  const cartItemsWithDetails = Object.entries(cartItems).reduce((acc, [itemId, itemData]) => {
+    const product = PRODUCTS.find((product) => product.id === Number(itemId.split('_')[0]));
+    acc[itemId] = { ...product, ...itemData };
     return acc;
-  }, {});
+  }, {});  
 
   const handleSubmit = async (e) => {
     e.preventDefault();

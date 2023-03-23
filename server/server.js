@@ -18,6 +18,7 @@ const transporter = nodemailer.createTransport({
 
 app.post('/send-email', async (req, res) => {
   const { email, name, lastName, phoneNumber, cartItems, totalAmount } = req.body;
+  console.log('Request body:', req.body); // Add this line
 
   const formatCartItems = (items) => {
     return Object.entries(items)

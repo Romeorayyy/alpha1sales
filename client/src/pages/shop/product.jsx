@@ -15,6 +15,7 @@ export const Product = (props) => {
   const cartItemCount = cartItems[productKey]?.quantity || 0;
 
   return (
+  <>
     <div className="product">
       <Link to={`/product/${id}`}>
         <img src={productImage} />
@@ -29,5 +30,6 @@ export const Product = (props) => {
         Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
       </button>
     </div>
+  </>
   );
 };

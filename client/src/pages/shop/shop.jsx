@@ -1,7 +1,7 @@
 import React from "react";
 import { PRODUCTS } from "../../products";
 import { Product } from "./product";
-import FullScreenVideo from "../../components/FullScreenVideo";
+import FullScreenVideo from "../../components/fullscreenvideo/FullScreenVideo.jsx";
 import "../../App.css"
 
 export const Shop = () => {

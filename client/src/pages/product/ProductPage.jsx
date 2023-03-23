@@ -117,7 +117,7 @@ const ProductPage = () => {
           >
             Add to Cart
           </button>
-          <button className={styles.buyNowBttn} onClick={handleBuyNowClick}>
+          <button className={styles.addToCartBttn} onClick={handleBuyNowClick}>
             Buy Now
           </button>
         </div>

@@ -3,8 +3,7 @@ import { ShopContext } from "../../context/shop-context";
 import { CartItem } from "../cart/cart-item";
 import { PRODUCTS } from "../../products";
 import CheckoutForm from "../checkoutform/CheckoutForm";
-
-//import "../../App.css";
+import "./cart.css";
 
 const Cart = () => {
   useEffect(() => {
@@ -16,28 +15,32 @@ const Cart = () => {
     return (
       <div className="cart-empty">
         <h1>Your cart is empty</h1>
-        <button onClick={() => (window.location.href = "/")}>Continue shopping</button>
+        <button className="back-home" onClick={() => (window.location.href = "/")}>
+          Continue shopping
+        </button>
       </div>
     );
   }
 
   return (
     <div className="cart">
-      <div className="cart-items">
-        {Object.entries(cartItems).map(([itemKey, item]) => {
-          const quantity = item.quantity;
+      <div className="cart-content">
+        <div className="cart-items">
+          {Object.entries(cartItems).map(([itemKey, item]) => {
+            const quantity = item.quantity;
 
-          if (quantity === 0) {
-            return null;
-          }
+            if (quantity === 0) {
+              return null;
+            }
 
-          const product = item.id && PRODUCTS.find((product) => product.id === item.id);
-          return product && quantity > 0 ? <CartItem key={itemKey} data={product} item={item} /> : null;
-        })}
-      </div>
-      <div className="cart-total">
-        <h2>Total: ${getTotalCartAmount().toFixed(2)}</h2>
-        <CheckoutForm />
+            const product = item.id && PRODUCTS.find((product) => product.id === item.id);
+            return product && quantity > 0 ? <CartItem key={itemKey} data={product} item={item} /> : null;
+          })}
+        </div>
+        <div className="cart-total">
+          <h2>Total: ${getTotalCartAmount().toFixed(2)}</h2>
+          <CheckoutForm />
+        </div>
       </div>
     </div>
   );

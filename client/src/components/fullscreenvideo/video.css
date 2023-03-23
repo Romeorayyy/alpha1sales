@@ -1,0 +1,15 @@
+.fullscreen-video-container {
+    height: 100vh;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .fullscreen-video-container {
+      height: 26vh;
+    }
+  }
+  
+  .fullscreen-video {
+    width: 100%;
+    height: 100%;
+  }
+  
