@@ -23,11 +23,12 @@ app.post('/send-email', async (req, res) => {
   const formatCartItems = (items) => {
     return Object.entries(items)
       .map(([itemId, itemData]) => {
-        const { productName, quantity, price } = itemData;
-        return `Item: ${productName}, Quantity: ${quantity.amount}, Price: $${price}`;
+        const { productName, id, optionName, option, quantity } = itemData;
+        return `Item: ${productName}, Product ID: ${id}, Option Name: ${optionName}, Option: ${JSON.stringify(option)}, Quantity: ${quantity}, Price: $${option.price}`;
       })
       .join('\n');
   };
+  
   
   
 
