@@ -23,12 +23,19 @@ app.post('/send-email', async (req, res) => {
   const formatCartItems = (items) => {
     return Object.entries(items)
       .map(([itemId, itemData]) => {
-        const { productName, id, optionName, option, quantity } = itemData;
-        return `Item: ${productName}, Product ID: ${id}, Option Name: ${optionName}, Option: ${JSON.stringify(option)}, Quantity: ${quantity}, Price: $${option.price}`;
+        const { productName, productImage, optionName, option, quantity } = itemData;
+        return `
+          <tr>
+            <td><img src="${productImage}" alt="${productName}" style="width: 100px; height: auto;"></td>
+            <td>${productName}</td>
+            <td>${optionName}</td>
+            <td>${quantity}</td>
+            <td>$${option.price.toFixed(2)}</td>
+          </tr>
+        `;
       })
-      .join('\n');
+      .join('');
   };
-  
   
   
 
@@ -36,16 +43,30 @@ app.post('/send-email', async (req, res) => {
     from: process.env.EMAIL_USER,
     to: email,
     subject: 'New Order',
-    text: `
-      Name: ${name}
-      Last Name: ${lastName}
-      Phone Number: ${phoneNumber}
-      Email: ${email}
-      Total Amount: $${totalAmount}
-      Items:
-      ${formatCartItems(cartItems)}
+    html: `
+      <h1>New Order</h1>
+      <p><strong>Name:</strong> ${name} ${lastName}</p>
+      <p><strong>Phone Number:</strong> ${phoneNumber}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Total Amount:</strong> $${totalAmount.toFixed(2)}</p>
+      <h2>Items:</h2>
+      <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Product Name</th>
+            <th>Option</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${formatCartItems(cartItems)}
+        </tbody>
+      </table>
     `,
   };
+  
 
   try {
     await transporter.sendMail(mailOptions);
