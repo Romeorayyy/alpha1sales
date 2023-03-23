@@ -11,26 +11,11 @@ const CheckoutForm = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const navigate = useNavigate();
 
-  const cartItemsToHtml = (cartItems) => {
-    let itemsHtml = "";
-
-    Object.entries(cartItems).forEach(([itemId, quantity]) => {
-      if (quantity > 0) {
-        const product = PRODUCTS.find((product) => product.id === Number(itemId));
-        itemsHtml += `
-          <div style="display: flex; margin-bottom: 16px;">
-            <img src="${product.productImage}" width="100" height="100" alt="${product.productName}" style="margin-right: 16px;" />
-            <div>
-              <p><b>${product.productName}</b></p>
-              <p>Price: $${product.price}</p>
-              <p>Quantity: ${quantity}</p>
-            </div>
-          </div>`;
-      }
-    });
-
-    return itemsHtml;
-  };
+  const cartItemsWithDetails = Object.entries(cartItems).reduce((acc, [itemId, quantity]) => {
+    const product = PRODUCTS.find((product) => product.id === Number(itemId));
+    acc[itemId] = { ...product, quantity };
+    return acc;
+  }, {});
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -41,7 +26,7 @@ const CheckoutForm = () => {
       name,
       email,
       phoneNumber,
-      itemsHtml: cartItemsToHtml(cartItems),
+      cartItems: cartItemsWithDetails,
       totalAmount,
     };
 

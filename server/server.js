@@ -17,21 +17,31 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/send-email', async (req, res) => {
-  const { email, name, phoneNumber, itemsHtml, totalAmount } = req.body;
+  const { email, name, lastName, phoneNumber, cartItems, totalAmount } = req.body;
+
+  const formatCartItems = (items) => {
+    return Object.entries(items)
+      .map(([itemId, itemData]) => {
+        const { productName, quantity, price } = itemData;
+        return `Item: ${productName}, Quantity: ${quantity.amount}, Price: $${price}`;
+      })
+      .join('\n');
+  };
+  
+  
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: `${email}, jackwhite5125@gmail.com`,
+    to: email,
     subject: 'New Order',
-    html: `
-      <div>
-        <p>Name: ${name}</p>
-        <p>Phone Number: ${phoneNumber}</p>
-        <p>Email: ${email}</p>
-        <p>Total Amount: $${totalAmount}</p>
-        <h3>Items:</h3>
-        ${itemsHtml}
-      </div>
+    text: `
+      Name: ${name}
+      Last Name: ${lastName}
+      Phone Number: ${phoneNumber}
+      Email: ${email}
+      Total Amount: $${totalAmount}
+      Items:
+      ${formatCartItems(cartItems)}
     `,
   };
 
