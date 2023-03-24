@@ -3,6 +3,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const path = require('path');
+const twilio = require('twilio');
 
 const app = express();
 app.use(express.json());
@@ -16,28 +17,53 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.post('/send-email', async (req, res) => {
-  const { email, name, lastName, phoneNumber, cartItems, totalAmount } = req.body;
-  console.log('Request body:', req.body); // Add this line
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const twilioPhoneNumber = process.env.TWILIO_PHONE_NUMBER;
+const client = twilio(accountSid, authToken);
 
-  const formatCartItems = (items) => {
-    return Object.entries(items)
-      .map(([itemId, itemData]) => {
-        const { productName, productImage, optionName, option, quantity } = itemData;
-        return `
-          <tr>
-            <td><img src="${productImage}" alt="${productName}" style="width: 100px; height: auto;"></td>
-            <td>${productName}</td>
-            <td>${optionName}</td>
-            <td>${quantity}</td>
-            <td>$${option.price.toFixed(2)}</td>
-          </tr>
-        `;
-      })
-      .join('');
-  };
-  
-  
+const formatCartItems = (items) => {
+  return Object.entries(items)
+    .map(([itemId, itemData]) => {
+      const { productName, productImage, optionName, option, quantity } = itemData;
+      return `
+        <tr>
+          <td><img src="${productImage}" alt="${productName}" style="width: 100px; height: auto;"></td>
+          <td>${productName}</td>
+          <td>${optionName}</td>
+          <td>${quantity}</td>
+          <td>$${option.price.toFixed(2)}</td>
+        </tr>
+      `;
+    })
+    .join('');
+};
+
+const formatCartItemsForSMS = (items) => {
+  return Object.entries(items)
+    .map(([itemId, itemData]) => {
+      const { productName, optionName, option, quantity } = itemData;
+      return `${productName} - Option: ${optionName} - Quantity: ${quantity} - Price: $${option.price.toFixed(2)}`;
+    })
+    .join('\n');
+};
+
+async function sendSMS(to, message) {
+  try {
+    const result = await client.messages.create({
+      body: message,
+      from: twilioPhoneNumber,
+      to: to,
+    });
+    console.log('SMS sent successfully:', result);
+  } catch (error) {
+    console.error('Failed to send SMS:', error.message);
+  }
+}
+
+app.post('/send-email', async (req, res) => {
+  const { email, name, lastName, phoneNumber, address, cartItems, totalAmount } = req.body;
+  console.log('Request body:', req.body);
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
@@ -47,6 +73,7 @@ app.post('/send-email', async (req, res) => {
       <h1>New Order</h1>
       <p><strong>Name:</strong> ${name} ${lastName}</p>
       <p><strong>Phone Number:</strong> ${phoneNumber}</p>
+      <p><strong>Shipping Address:</strong> ${address}</p>
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>Total Amount:</strong> $${totalAmount.toFixed(2)}</p>
       <h2>Items:</h2>
@@ -66,24 +93,35 @@ app.post('/send-email', async (req, res) => {
       </table>
     `,
   };
-  
 
   try {
     await transporter.sendMail(mailOptions);
     res.send('Email sent successfully');
-  } catch (error) {
-    console.error('Failed to send email:', error);
-    res.status(500).send('Failed to send email');
-  }
-});
-
-// Serve the static files from the client/build folder
-app.use(express.static(path.join(__dirname, '../client/build')));
-
-// Serve the index.html file for all other requests
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
-});
-
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+    const smsMessage = `
+    New Order
+    Name: ${name} ${lastName}
+    Phone Number: ${phoneNumber}
+    Shipping Address: ${address}
+    Email: ${email}
+    Total Amount: $${totalAmount.toFixed(2)}
+    Items:
+    ${formatCartItemsForSMS(cartItems)}
+    `;
+        sendSMS('+12487945509', smsMessage);
+      } catch (error) {
+        console.error('Failed to send email:', error);
+        res.status(500).send('Failed to send email');
+      }
+    });
+    
+    // Serve the static files from the client/build folder
+    app.use(express.static(path.join(__dirname, '../client/build')));
+    
+    // Serve the index.html file for all other requests
+    app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+    });
+    
+    const PORT = process.env.PORT || 3001;
+    app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+    

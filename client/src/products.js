@@ -135,7 +135,7 @@ export const PRODUCTS = [
     ],
     productImage: "https://i.ibb.co/kqNt4X4/Pineapple-Ice-webp.webp",
     description: "<p>Supremeecig's latest breakthrough in disposable vaping is here - presenting the BOSS 10K disposable from their new Bape-Vape series. This exceptional device is equipped with a USB Type-C rechargeable battery and a mesh coil that delivers unbeatable flavor. With an astounding 10,000 puffs, it is the largest disposable in the market. The BOSS 10K disposable comes preloaded with 50mg/5% nicotine e-juice and boasts an impressive 850mAh battery capacity to ensure longer vaping sessions. Choose from a selection of 17 delectable flavors to suit your taste. Get your hands on this sleek and high-performing vape now!</p>",
-    brand: "",
+    brand: "Novobar",
     additionalinfotitle1: "Warning",
     additionalinfodescription1: "<p dir=ltr> Warning this item contains nicotine</p>",
     additionalinfotitle2: "Flavors & Quantities per Box",
@@ -804,10 +804,10 @@ export const PRODUCTS = [
     price: 55,
     options: [
       {
-        name: "WATERMELON",
-        price: 0
-      }
+        name: "WATERMELON", price: 43
+      },
     ],
+    defaultOptionName: "WATERMELON",
     category: [
       "Vape Category"
     ],

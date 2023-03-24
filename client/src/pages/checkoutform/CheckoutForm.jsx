@@ -9,6 +9,7 @@ const CheckoutForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [address, setAddress] = useState("");
   const navigate = useNavigate();
 
   const cartItemsWithDetails = Object.entries(cartItems).reduce((acc, [itemId, itemData]) => {
@@ -26,6 +27,7 @@ const CheckoutForm = () => {
       name,
       email,
       phoneNumber,
+      address,
       cartItems: cartItemsWithDetails,
       totalAmount,
     };
@@ -80,6 +82,15 @@ const CheckoutForm = () => {
           placeholder="Enter your phone number"
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
+          required
+        />
+        <label htmlFor="address">Address:</label>
+        <input
+          type="tel"
+          id="address"
+          placeholder="Enter your shipping address"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
           required
         />
         <button type="submit">Submit</button>
