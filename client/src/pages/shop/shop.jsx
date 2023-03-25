@@ -2,6 +2,7 @@ import React from "react";
 import { PRODUCTS } from "../../products";
 import { Product } from "./product";
 import FullScreenVideo from "../../components/fullscreenvideo/FullScreenVideo";
+import logo from "../../assets/logo-alpha1sales.png"
 import "../../App.css"
 
 export const Shop = () => {
@@ -9,7 +10,7 @@ export const Shop = () => {
     <div className="shop">
       <FullScreenVideo />
       <div className="shopTitle">
-        <h1>Alpha1Sales</h1>
+        <img style={{width: "20rem"}} src={logo} alt="logo for alpha1sales" />
       </div>
 
       <div className="products">

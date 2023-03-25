@@ -17,7 +17,7 @@ export const Product = (props) => {
   return (
   <>
     <div className="product">
-      <Link to={`/product/${id}`}>
+      <Link style={{color: "black"}} to={`/product/${id}`}>
         <img src={productImage} />
         <div className="description">
           <p>

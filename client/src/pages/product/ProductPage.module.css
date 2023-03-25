@@ -1,36 +1,55 @@
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  /* pointer-events: none; */
+}
+
 .productPage {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-}
-
-.productCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #fff;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-  border-radius: 25px;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 2rem;
-  width: 80%;
-  max-width: 700px;
 }
 
-.productCard img {
+.fixedImage {
+  flex: 1;
+  max-width: 500px;
+  position: sticky;
+  top: 2rem;
+}
+
+.fixedImage img {
   width: 100%;
   max-width: 300px;
   object-fit: cover;
   border-radius: 12px;
-  margin-bottom: 1.5rem;
 }
 
-.productCard h3 {
+.productInfo {
+  flex: 1;
+  max-width: 500px;
+  padding-left: 2rem;
+}
+
+.productInfo h3 {
   font: 1.75rem bold;
   margin-bottom: 1rem;
 }
 
-.productCard p {
+.productInfo p {
   font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.optionSelector {
   margin-bottom: 1rem;
 }
 
@@ -69,7 +88,7 @@
 }
 
 table {
-  border-collapse: collapse; 
+  border-collapse: collapse;
   width: 100%;
 }
 
@@ -80,4 +99,20 @@ thead {
 th, td {
   border: 1px solid #ddd;
   padding: 8px;
+}
+
+@media (max-width: 768px) {
+  .productPage {
+    flex-direction: column;
+  }
+
+  .fixedImage {
+    position: static;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .productInfo {
+    padding-left: 0;
+  }
 }

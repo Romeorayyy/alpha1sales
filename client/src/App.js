@@ -8,7 +8,7 @@ import ProductPage from "./pages/product/ProductPage";
 import CheckoutForm from "./pages/checkoutform/CheckoutForm"; // Import the CheckoutForm component
 import { ShopContextProvider } from "./context/shop-context";
 import ThankYou from "./pages/ThankYou/ThankYou";
-
+import AgeCheck from "./components/agechecker/AgeChecker";
 
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
             <Route path="/checkout" element={<CheckoutForm />} />
             <Route path="/thankyou" element={<ThankYou />} />
           </Routes>
+          <AgeCheck />
         </Router>
       </ShopContextProvider>
     </div>

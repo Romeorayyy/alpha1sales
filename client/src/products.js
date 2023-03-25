@@ -830,9 +830,10 @@ export const PRODUCTS = [
     options: [
       {
         name: "ROOT",
-        price: 0
+        price: 55
       }
     ],
+    defaultOptionName: "Root",
     category: [
       "Vape Category",
       "Top Seller",
@@ -881,9 +882,10 @@ export const PRODUCTS = [
     options: [
       {
         name: "CHERRY",
-        price: 0
+        price: 55
       }
     ],
+    defaultOptionName: "CHERRY",
     category: [
       "Vape Category",
       "Disposables Vape"
@@ -906,9 +908,10 @@ export const PRODUCTS = [
     options: [
       {
         name: "FRESH",
-        price: 0
+        price: 55
       }
     ],
+    defaultOptionName: "FRESH",
     category: [
       "Vape Category",
       "Disposables Vape"
@@ -932,9 +935,10 @@ export const PRODUCTS = [
     options: [
       {
         name: "LEMONADE",
-        price: 0
+        price: 55
       }
     ],
+    defaultOptionName: "LEMONADE",
     category: [
       "Vape Category",
       "Disposables Vape"
@@ -958,9 +962,10 @@ export const PRODUCTS = [
     options: [
       {
         name: "PEACH",
-        price: 0
+        price: 55
       }
     ],
+    defaultOptionName: "PEACH",
     category: [
       "Vape Category"
     ],
@@ -1035,9 +1040,10 @@ export const PRODUCTS = [
     options: [
       {
         name: "MIXED",
-        price: 0
+        price: 55
       }
     ],
+    defaultOptionName: "MIXED",
     category: [
       "Vape Category",
       "Top Seller",

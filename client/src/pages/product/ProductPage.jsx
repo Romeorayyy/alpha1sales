@@ -71,10 +71,12 @@ const ProductPage = () => {
 
   return (
     <div className={styles.productPage}>
-      <div className={styles.productCard}>
+      <div className={styles.fixedImage}>
         <img src={product.productImage} alt={product.productName} />
+      </div>
+      <div className={styles.productInfo}>
         <h3>{product.productName}</h3>
-        <div dangerouslySetInnerHTML={{__html: product.description}}></div>
+        <div dangerouslySetInnerHTML={{ __html: product.description }}></div>
         <p>
           <b>Price:</b> ${selectedOption.price.toFixed(2)}
         </p>
@@ -96,17 +98,32 @@ const ProductPage = () => {
           </div>
         )}
         <div className={styles.quantityControl}>
-         
-        <button onClick={() => removeFromCart(product.id, selectedOption)} disabled={!cartItems[`${product.id}_${selectedOption.name}`]}>-</button>
+          <button
+            onClick={() => removeFromCart(product.id, selectedOption)}
+            disabled={!cartItems[`${product.id}_${selectedOption.name}`]}
+          >
+            -
+          </button>
           <input
             type="number"
-            value={(cartItems[`${product.id}_${selectedOption.name}`] && cartItems[`${product.id}_${selectedOption.name}`].quantity) || 0}
+            value={
+              (cartItems[`${product.id}_${selectedOption.name}`] &&
+                cartItems[`${product.id}_${selectedOption.name}`].quantity) ||
+              0
+            }
             onChange={(e) => {
               const newValue = parseInt(e.target.value);
-              updateCartItemCount(newValue >= 0 ? newValue : 0, product.id, selectedOption);
+              updateCartItemCount(
+                newValue >= 0 ? newValue : 0,
+                product.id,
+                selectedOption
+              );
             }}
+            readOnly
           />
-          <button onClick={() => addToCart(product.id, selectedOption)}>+</button>
+          <button onClick={() => addToCart(product.id, selectedOption)}>
+            +
+          </button>
         </div>
         <div>
           <button
@@ -125,6 +142,6 @@ const ProductPage = () => {
       </div>
     </div>
   );
-};
+}  
 
 export default ProductPage;
