@@ -6,7 +6,8 @@ export const PRODUCTS = [
     options: [
       { name: "LET'S GO 320G, 12 canisters", price: 120 },
       { name: "LET'S GO 1364G, 2 canisters", price:80 }, 
-      { name: "LET'S GO 640G, 50 cylinders", price: 80 }
+      { name: "LET'S GO 640G, 50 cylinders", price: 100 },
+      { name: "LET'S GO 8G, 50 cylinders, 1 box(12 boxes/case)", price: 150 }
     ],
     defaultOptionName: "LET'S GO 320G, 12 canisters", 
     category: [
@@ -125,7 +126,7 @@ export const PRODUCTS = [
     ],
     productImage: "https://i.ibb.co/kqNt4X4/Pineapple-Ice-webp.webp",
     description: "<p>Supremeecig's latest breakthrough in disposable vaping is here - presenting the BOSS 10K disposable from their new Bape-Vape series. This exceptional device is equipped with a USB Type-C rechargeable battery and a mesh coil that delivers unbeatable flavor. With an astounding 10,000 puffs, it is the largest disposable in the market. The BOSS 10K disposable comes preloaded with 50mg/5% nicotine e-juice and boasts an impressive 850mAh battery capacity to ensure longer vaping sessions. Choose from a selection of 17 delectable flavors to suit your taste. Get your hands on this sleek and high-performing vape now!</p>",
-    brand: "Novobar",
+    brand: "Bape",
     additionalinfotitle1: "Warning",
     additionalinfodescription1: "<p dir=ltr> Warning this item contains nicotine</p>",
     additionalinfotitle2: "Flavors & Quantities per Box",
@@ -267,7 +268,7 @@ export const PRODUCTS = [
     additionalinfotitle1: "Warning",
     additionalinfodescription1: "<p dir=ltr> Warning this item contains nicotine</p>",
     additionalinfotitle2: "Flavors & Quantities per Box",
-    additionalinfodescription2: "<p >&nbsp;</p>"
+    additionalinfodescription2: "<table><tbody><tr><th>Flavor</th><th>How many are included in each box?</th></tr><tr><td>BLUEBERRY MINT</td><td>5 units in a display box and 60 display boxes in a master case</td></tr></tbody></table>"
   },
   {
     id: 13,
@@ -888,10 +889,10 @@ export const PRODUCTS = [
     productName: "SMOK NOVO BAR AL6000",
     price: 55,
     options: [
-      { name: "Master Case", price: 2000 },
-      { name: "Display Box", price: 120 }
+      { name: "Master Case", price: 1100 },
+      { name: "Display Box", price: 55 }
     ],
-    defaultOptionName: "Display Box", 
+    defaultOptionName: "Display Box",
     category: [
       "Vape Category",
       "Disposables Vape"
@@ -905,310 +906,275 @@ export const PRODUCTS = [
     productName: "SMOK NOVO BAR AL6000 - WATERMELON CANDY",
     price: 55,
     options: [
-      {
-        name: "WATERMELON", price: 43
-      },
+      { name: "Master Case", price: 1100 },
+      { name: "Display Box", price: 55 }
     ],
-    defaultOptionName: "WATERMELON",
+    defaultOptionName: "Display Box",
     category: [
       "Vape Category"
     ],
     productImage: "https://i.ibb.co/N3c6WYH/smok-al6000-disp-watermelon-candy-jpg.jpg",
-    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><p><strong>Key Features</strong></p><ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul>",
+    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><table>  <tbody>   <tr>    <td>&nbsp;<strong>FLAVOR</strong></td>    <td><strong>DESCRIPTION</strong></td>   </tr>   <tr>    <td>Watermelon Candy</td>    <td>Watermelon, Menthol</td>   </tr>  </tbody> </table><p>&nbsp;</p>",
     brand: "",
     additionalinfotitle1: "PRODUCT INFO",
-    additionalinfodescription1: "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item.",
-    additionalinfotitle2: "RETURN & REFUND POLICY",
-    additionalinfodescription2: "I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.",
-    additionalinfotitle3: "SHIPPING INFO",
-    additionalinfodescription3: "I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.",
-    additionalinfotitle4: "FLAVOR",
-    additionalinfodescription4: "<table>  <tbody>   <tr>    <td>&nbsp;<strong>FLAVOR</strong></td>    <td><strong>DESCRIPTION</strong></td>   </tr>   <tr>    <td>Watermelon Candy</td>    <td>Watermelon, Menthol</td>   </tr>  </tbody> </table>"
+    additionalinfodescription1: "<ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul><p>&nbsp;</p>",
+    additionalinfotitle2: "Shipping",
+    additionalinfodescription2: "<p>We ship&nbsp;to all of the United States</p>",
+    additionalinfotitle3: "Product Quantity",
+    additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
     id: 39,
     productName: "SMOK NOVO BAR AL6000 - ROOT BEER",
     price: 55,
     options: [
-      {
-        name: "ROOT",
-        price: 55
-      }
+      { name: "Master Case", price: 1100 },
+      { name: "Display Box", price: 55 }
     ],
-    defaultOptionName: "Root",
+    defaultOptionName: "Display Box",
     category: [
       "Vape Category",
       "Top Seller",
       "Disposables Vape"
     ],
     productImage: "https://i.ibb.co/SKfdKWY/root-beer-webp.webp",
-    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><p><strong>Key Features</strong></p><ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul>",
+    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><table>  <tbody>   <tr>    <td>&nbsp;<strong>FLAVOR</strong></td>    <td><strong>DESCRIPTION</strong></td>   </tr>   <tr>    <td>Root Beer</td>    <td>Root Beer</td>   </tr>  </tbody> </table><p>&nbsp;</p>",
     brand: "",
     additionalinfotitle1: "PRODUCT INFO",
-    additionalinfodescription1: "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item.",
-    additionalinfotitle2: "RETURN & REFUND POLICY",
-    additionalinfodescription2: "I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.",
-    additionalinfotitle3: "SHIPPING INFO",
-    additionalinfodescription3: "I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.",
-    additionalinfotitle4: "FLAVOR",
-    additionalinfodescription4: "<table>  <tbody>   <tr>    <td>&nbsp;<strong>FLAVOR</strong></td>    <td><strong>DESCRIPTION</strong></td>   </tr>   <tr>    <td>Root Beer</td>    <td>Root Beer</td>   </tr>  </tbody> </table>"
+    additionalinfodescription1: "<ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul><p>&nbsp;</p>",
+    additionalinfotitle2: "Shipping",
+    additionalinfodescription2: "<p>We ship&nbsp;to all of the United States</p>",
+    additionalinfotitle3: "Product Quantity",
+    additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
     id: 40,
     productName: "Blue Razz Ice",
     price: 55,
     options: [
-      { name: "Master Case", price: 2000 },
-      { name: "Display Box", price: 120 }
+      { name: "Master Case", price: 1100 },
+      { name: "Display Box", price: 55 }
     ],
-    defaultOptionName: "Display Box", 
+    defaultOptionName: "Display Box",
     category: [
       "Vape Category",
       "Top Seller"
     ],
     productImage: "https://i.ibb.co/Z1JcrbJ/smok-al6000-disp-blue-razz-ice-jpg.jpg",
-    description: "<p><strong>AL6000 DISPOSABLE VAPE</strong></p><ul><li><strong>Flavor</strong>:&nbsp;The Blue Razz Ice Novo Bar AL6000 vape has a popular blue razz and mint blend that provides a sweet taste on inhale and a cool, refreshing taste on exhale.</li><li><strong>E-liquid contents</strong>: 13ml</li><li><strong>Nicotine Level</strong>: 50mg</li><li><strong>Puffs per Device</strong>: +6000</li><li><strong>Battery</strong>: 650mAh (Rechargeable via USB-C)</li><li><strong>E-Liquid Indicator Light</strong></li><li><strong>Battery Indicator Light</strong></li></ul>",
+    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><table>  <tbody>   <tr>    <td>&nbsp;<strong>FLAVOR</strong></td>    <td><strong>DESCRIPTION</strong></td>   </tr>   <tr>    <td>Blue Razz Ice</td>    <td>Blue Raspberry, Menthol</td>   </tr>  </tbody> </table><p>&nbsp;</p>",
     brand: "",
     additionalinfotitle1: "PRODUCT INFO",
-    additionalinfodescription1: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 10 boxes in a single master, total vapes is 200</td>   </tr>   <tr>    <td>Box</td>    <td>Has 10 10 vapes in a Display box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
-    additionalinfotitle2: "RETURN & REFUND POLICY",
-    additionalinfodescription2: "I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.",
-    additionalinfotitle3: "SHIPPING INFO",
-    additionalinfodescription3: "I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence."
+    additionalinfodescription1: "<ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul><p>&nbsp;</p>",
+    additionalinfotitle2: "Shipping",
+    additionalinfodescription2: "<p>We ship&nbsp;to all of the United States</p>",
+    additionalinfotitle3: "Product Quantity",
+    additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
     id: 41,
     productName: "SMOK NOVO BAR AL6000 - CHERRY COLA",
     price: 55,
     options: [
-      {
-        name: "CHERRY",
-        price: 55
-      }
+      { name: "Master Case", price: 1100 },
+      { name: "Display Box", price: 55 }
     ],
-    defaultOptionName: "CHERRY",
+    defaultOptionName: "Display Box",
     category: [
       "Vape Category",
       "Disposables Vape"
     ],
-    productImage: "https://i.ibb.co/PcrvbWY/smok-al6000-disp-cherry-cola-jpg.jpg",
+    productImage: "https://i.ibb.co/PcrvbWY/smok-al6000-disp-cherry-cola-jpg.jpg<table>  <thead>   <tr>    <th scope=col>FLAVOR</th>    <th scope=col>DESCRIPTION</th>   </tr>  </thead>  <tbody>   <tr>    <td>Cherry Cola</td>    <td>Cherry Soda</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
     brand: "",
     additionalinfotitle1: "PRODUCT INFO",
-    additionalinfodescription1: "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item.",
-    additionalinfotitle2: "RETURN & REFUND POLICY",
-    additionalinfodescription2: "I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.",
-    additionalinfotitle3: "SHIPPING INFO",
-    additionalinfodescription3: "I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.",
-    additionalinfotitle4: "Flavor",
-    additionalinfodescription4: "<table>  <thead>   <tr>    <th scope=col>FLAVOR</th>    <th scope=col>DESCRIPTION</th>   </tr>  </thead>  <tbody>   <tr>    <td>Cherry Cola</td>    <td>Cherry Soda</td>   </tr>  </tbody> </table> <p>&nbsp;</p>"
+    additionalinfodescription1: "<ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul><p>&nbsp;</p>",
+    additionalinfotitle2: "Shipping",
+    additionalinfodescription2: "<p>We ship&nbsp;to all of the United States</p>",
+    additionalinfotitle3: "Product Quantity",
+    additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
     id: 42,
     productName: "SMOK NOVO BAR AL6000 - FRESH MINT",
     price: 55,
     options: [
-      {
-        name: "FRESH",
-        price: 55
-      }
+      { name: "Master Case", price: 1100 },
+      { name: "Display Box", price: 55 }
     ],
-    defaultOptionName: "FRESH",
+    defaultOptionName: "Display Box",
     category: [
       "Vape Category",
       "Disposables Vape"
     ],
     productImage: "https://i.ibb.co/s3ckd22/smok-al6000-disp-fresh-mint-jpg.jpg",
-    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><p><strong>Key Features</strong></p><ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul>",
+    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><table>  <tbody>   <tr>    <td>&nbsp;<strong>FLAVOR</strong></td>    <td><strong>DESCRIPTION</strong></td>   </tr>   <tr>    <td>Fresh Mint</td>    <td>Mint</td>   </tr>  </tbody> </table><p>&nbsp;</p>",
     brand: "",
     additionalinfotitle1: "PRODUCT INFO",
-    additionalinfodescription1: "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item.",
-    additionalinfotitle2: "RETURN & REFUND POLICY",
-    additionalinfodescription2: "I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.",
-    additionalinfotitle3: "SHIPPING INFO",
-    additionalinfodescription3: "I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.",
-    additionalinfotitle4: "FLAVOR",
-    additionalinfodescription4: "<table>  <tbody>   <tr>    <td>&nbsp;<strong>FLAVOR</strong></td>    <td><strong>DESCRIPTION</strong></td>   </tr>   <tr>    <td>Fresh Mint</td>    <td>Mint</td>   </tr>  </tbody> </table>"
+    additionalinfodescription1: "<ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul><p>&nbsp;</p>",
+    additionalinfotitle2: "Shipping",
+    additionalinfodescription2: "<p>We ship&nbsp;to all of the United States</p>",
+    additionalinfotitle3: "Product Quantity",
+    additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
     id: 43,
     productName: "SMOK NOVO BAR AL6000 - LEMONADE CHILL",
     price: 55,
     options: [
-      {
-        name: "LEMONADE",
-        price: 55
-      }
+      { name: "Master Case", price: 1100 },
+      { name: "Display Box", price: 55 }
     ],
-    defaultOptionName: "LEMONADE",
+    defaultOptionName: "Display Box",
     category: [
       "Vape Category",
       "Disposables Vape"
     ],
     productImage: "https://i.ibb.co/C71Pz7W/smok-al6000-disp-lemonade-chill-jpg.jpg",
-    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><p><strong>Key Features</strong></p><ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul>",
+    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><table>  <tbody>   <tr>    <td>&nbsp;<strong>FLAVOR</strong></td>    <td><strong>DESCRIPTION</strong></td>   </tr>   <tr>    <td>Lemonade Chill</td>    <td>Lemonade, Menthol</td>   </tr>  </tbody> </table><p>&nbsp;</p>",
     brand: "",
     additionalinfotitle1: "PRODUCT INFO",
-    additionalinfodescription1: "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item.",
-    additionalinfotitle2: "RETURN & REFUND POLICY",
-    additionalinfodescription2: "I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.",
-    additionalinfotitle3: "SHIPPING INFO",
-    additionalinfodescription3: "I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.",
-    additionalinfotitle4: "FLAVOR",
-    additionalinfodescription4: "<table>  <tbody>   <tr>    <td>&nbsp;<strong>FLAVOR</strong></td>    <td><strong>DESCRIPTION</strong></td>   </tr>   <tr>    <td>Lemonade Chill</td>    <td>Lemonade, Menthol</td>   </tr>  </tbody> </table>"
+    additionalinfodescription1: "<ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul><p>&nbsp;</p>",
+    additionalinfotitle2: "Shipping",
+    additionalinfodescription2: "<p>We ship&nbsp;to all of the United States</p>",
+    additionalinfotitle3: "Product Quantity",
+    additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
     id: 44,
     productName: "SMOK NOVO BAR AL6000 - PEACH ICE",
     price: 55,
     options: [
-      {
-        name: "PEACH",
-        price: 55
-      }
+      { name: "Master Case", price: 1100 },
+      { name: "Display Box", price: 55 }
     ],
-    defaultOptionName: "PEACH",
+    defaultOptionName: "Display Box",
     category: [
       "Vape Category"
     ],
     productImage: "https://i.ibb.co/SXFNy8V/smok-al6000-disp-peach-ice-jpg.jpg",
-    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><p>&nbsp;</p><p><strong>Key Features</strong></p><ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul>",
+    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><table>  <thead>   <tr>    <th scope=col>&nbsp;<strong>FLAVOR</strong></th>    <th scope=col><strong>DESCRIPTION</strong></th>   </tr>  </thead>  <tbody>   <tr>    <td>Peach Ice</td>    <td>Peach, Menthol</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
     brand: "",
     additionalinfotitle1: "PRODUCT INFO",
-    additionalinfodescription1: "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item.",
-    additionalinfotitle2: "RETURN & REFUND POLICY",
-    additionalinfodescription2: "I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.",
-    additionalinfotitle3: "SHIPPING INFO",
-    additionalinfodescription3: "I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.",
-    additionalinfotitle4: "FLAVOR",
-    additionalinfodescription4: "<table>  <thead>   <tr>    <th scope=col>&nbsp;<strong>FLAVOR</strong></th>    <th scope=col><strong>DESCRIPTION</strong></th>   </tr>  </thead>  <tbody>   <tr>    <td>Peach Ice</td>    <td>Peach, Menthol</td>   </tr>  </tbody> </table> <p>&nbsp;</p>"
+    additionalinfodescription1: "<ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul><p>&nbsp;</p>",
+    additionalinfotitle2: "Shipping",
+    additionalinfodescription2: "<p>We ship&nbsp;to all of the United States</p>",
+    additionalinfotitle3: "Product Quantity",
+    additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
     id: 45,
     productName: "SMOK NOVO BAR AL6000 - STRAWNANA",
     price: 55,
     options: [
-      { name: "Master Case", price: 2000 },
-      { name: "Display Box", price: 120 }
+      { name: "Master Case", price: 1100 },
+      { name: "Display Box", price: 55 }
     ],
-    defaultOptionName: "Display Box", 
+    defaultOptionName: "Display Box",
     category: [
       "Vape Category",
       "Disposables Vape"
     ],
     productImage: "https://i.ibb.co/FKPnq8R/smok-al6000-disp-strawnana-jpg.jpg",
-    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><p><strong>Key Features</strong></p><ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul>",
+    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><table>  <tbody>   <tr>    <td>&nbsp;<strong>FLAVOR</strong></td>    <td><strong>DESCRIPTION</strong></td>   </tr>   <tr>    <td>Strawnana</td>    <td>Strawberry, Banana</td>   </tr>  </tbody> </table><p>&nbsp;</p>",
     brand: "",
     additionalinfotitle1: "PRODUCT INFO",
-    additionalinfodescription1: "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item.",
-    additionalinfotitle2: "RETURN & REFUND POLICY",
-    additionalinfodescription2: "I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.",
-    additionalinfotitle3: "SHIPPING INFO",
-    additionalinfodescription3: "I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.",
-    additionalinfotitle4: "FLAVOR",
-    additionalinfodescription4: "<table>  <tbody>   <tr>    <td>&nbsp;<strong>FLAVOR</strong></td>    <td><strong>DESCRIPTION</strong></td>   </tr>   <tr>    <td>Strawnana</td>    <td>Strawberry, Banana</td>   </tr>  </tbody> </table>"
+    additionalinfodescription1: "<ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul><p>&nbsp;</p>",
+    additionalinfotitle2: "Shipping",
+    additionalinfodescription2: "<p>We ship&nbsp;to all of the United States</p>",
+    additionalinfotitle3: "Product Quantity",
+    additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
     id: 46,
     productName: "SMOK NOVO BAR AL6000 - MR.PEPPER",
     price: 55,
     options: [
-      { name: "Master Case", price: 2000 },
-      { name: "Display Box", price: 120 }
+      { name: "Master Case", price: 1100 },
+      { name: "Display Box", price: 55 }
     ],
-    defaultOptionName: "Display Box", 
+    defaultOptionName: "Display Box",
     category: [
       "Vape Category",
       "Disposables Vape"
     ],
     productImage: "https://i.ibb.co/3mLjkgp/smok-al6000-disp-mr-pepper-jpg.jpg",
-    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><p><strong>Key Features</strong></p><ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul>",
+    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><table>  <tbody>   <tr>    <td>&nbsp;<strong>FLAVOR</strong></td>    <td><strong>DESCRIPTION</strong></td>   </tr>   <tr>    <td>Mr.Pepper</td>    <td>Pepper Soda</td>   </tr>  </tbody> </table><p>&nbsp;</p>",
     brand: "",
     additionalinfotitle1: "PRODUCT INFO",
-    additionalinfodescription1: "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item.",
-    additionalinfotitle2: "RETURN & REFUND POLICY",
-    additionalinfodescription2: "I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.",
-    additionalinfotitle3: "SHIPPING INFO",
-    additionalinfodescription3: "I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.",
-    additionalinfotitle4: "FLAVOR",
-    additionalinfodescription4: "<table>  <tbody>   <tr>    <td>&nbsp;<strong>FLAVOR</strong></td>    <td><strong>DESCRIPTION</strong></td>   </tr>   <tr>    <td>Mr.Pepper</td>    <td>Pepper Soda</td>   </tr>  </tbody> </table>"
+    additionalinfodescription1: "<ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul><p>&nbsp;</p>",
+    additionalinfotitle2: "Shipping",
+    additionalinfodescription2: "<p>We ship&nbsp;to all of the United States</p>",
+    additionalinfotitle3: "Product Quantity",
+    additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
     id: 47,
     productName: "SMOK NOVO BAR AL6000 - MIXED BERRIES",
     price: 55,
     options: [
-      {
-        name: "MIXED",
-        price: 55
-      }
+      { name: "Master Case", price: 1100 },
+      { name: "Display Box", price: 55 }
     ],
-    defaultOptionName: "MIXED",
+    defaultOptionName: "Display Box",
     category: [
       "Vape Category",
       "Top Seller",
       "Disposables Vape"
     ],
     productImage: "https://i.ibb.co/QYsWS4j/smok-al6000-disp-mixed-berries-jpg.jpg",
-    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><p><strong>Key Features</strong></p><ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul>",
+    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><table>  <tbody>   <tr>    <td>&nbsp;<strong>FLAVOR</strong></td>    <td><strong>DESCRIPTION</strong></td>   </tr>   <tr>    <td>Mixed Berries</td>    <td>Strawberries, Blueberries, Raspberries</td>   </tr>  </tbody> </table><p>&nbsp;</p>",
     brand: "",
     additionalinfotitle1: "PRODUCT INFO",
-    additionalinfodescription1: "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item.",
-    additionalinfotitle2: "RETURN & REFUND POLICY",
-    additionalinfodescription2: "I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.",
-    additionalinfotitle3: "SHIPPING INFO",
-    additionalinfodescription3: "I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.",
-    additionalinfotitle4: "Flavor",
-    additionalinfodescription4: "<table>  <tbody>   <tr>    <td>&nbsp;<strong>FLAVOR</strong></td>    <td><strong>DESCRIPTION</strong></td>   </tr>   <tr>    <td>Mixed Berries</td>    <td>Strawberries, Blueberries, Raspberries</td>   </tr>  </tbody> </table>"
+    additionalinfodescription1: "<ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul><p>&nbsp;</p>",
+    additionalinfotitle2: "Shipping",
+    additionalinfodescription2: "<p>We ship&nbsp;to all of the United States</p>",
+    additionalinfotitle3: "Product Quantity",
+    additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
     id: 48,
     productName: "SMOK NOVO BAR AL6000 - STRAZZ",
     price: 55,
     options: [
-      { name: "Master Case", price: 2000 },
-      { name: "Display Box", price: 120 }
+      { name: "Master Case", price: 1100 },
+      { name: "Display Box", price: 55 }
     ],
-    defaultOptionName: "Display Box", 
+    defaultOptionName: "Display Box",
     category: [
       "Vape Category",
       "Top Seller",
       "Disposables Vape"
     ],
     productImage: "https://i.ibb.co/JFbTL3R/smok-al6000-disp-strazz-jpg.jpg",
-    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><p><strong>Key Features</strong></p><ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul>",
+    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><table>  <tbody>   <tr>    <td>&nbsp;<strong>FLAVOR</strong></td>    <td><strong>DESCRIPTION</strong></td>   </tr>   <tr>    <td>Strazz</td>    <td>Strawberry, Menthol</td>   </tr>  </tbody> </table><p>&nbsp;</p>",
     brand: "",
     additionalinfotitle1: "PRODUCT INFO",
-    additionalinfodescription1: "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item.",
-    additionalinfotitle2: "RETURN & REFUND POLICY",
-    additionalinfodescription2: "I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.",
-    additionalinfotitle3: "SHIPPING INFO",
-    additionalinfodescription3: "I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.",
-    additionalinfotitle4: "FLAVOR",
-    additionalinfodescription4: "<table>  <tbody>   <tr>    <td>&nbsp;<strong>FLAVOR</strong></td>    <td><strong>DESCRIPTION</strong></td>   </tr>   <tr>    <td>Strazz</td>    <td>Strawberry, Menthol</td>   </tr>  </tbody> </table>"
+    additionalinfodescription1: "<ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul><p>&nbsp;</p>",
+    additionalinfotitle2: "Shipping",
+    additionalinfodescription2: "<p>We ship&nbsp;to all of the United States</p>",
+    additionalinfotitle3: "Product Quantity",
+    additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
     id: 49,
     productName: "SMOK NOVO BAR AL6000 - SUNDOWN",
     price: 55,
     options: [
-      { name: "Master Case", price: 2000 },
-      { name: "Display Box", price: 120 }
+      { name: "Master Case", price: 1100 },
+      { name: "Display Box", price: 55 }
     ],
-    defaultOptionName: "Display Box", 
+    defaultOptionName: "Display Box",
     category: [
       "Vape Category",
       "Disposables Vape"
     ],
     productImage: "https://i.ibb.co/5xc23Qr/smok-al6000-disp-sundown-jpg.jpg",
-    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><p><strong>Key Features</strong></p><ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul>",
+    description: "<p>AL6000 is intended to redefine the ultimate flavor and certified to be far beyond the original intention. Made to be intelligent, it keeps you updated about&nbsp;the remaining battery and e-liquid&nbsp;levels while vaping via indicators located on the device.</p><p>&nbsp;</p><table>  <tbody>   <tr>    <td>&nbsp;<strong>FLAVOR</strong></td>    <td><strong>DESCRIPTION</strong></td>   </tr>   <tr>    <td>Sundown</td>    <td>Lemon, Lime, Soda</td>   </tr>  </tbody> </table><p>&nbsp;</p>",
     brand: "",
     additionalinfotitle1: "PRODUCT INFO",
-    additionalinfodescription1: "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item.",
-    additionalinfotitle2: "RETURN & REFUND POLICY",
-    additionalinfodescription2: "I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.",
-    additionalinfotitle3: "SHIPPING INFO",
-    additionalinfodescription3: "I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.",
-    additionalinfotitle4: "FLAVOR",
-    additionalinfodescription4: "<table>  <tbody>   <tr>    <td>&nbsp;<strong>FLAVOR</strong></td>    <td><strong>DESCRIPTION</strong></td>   </tr>   <tr>    <td>Sundown</td>    <td>Lemon, Lime, Soda</td>   </tr>  </tbody> </table>"
+    additionalinfodescription1: "<ul><li>Size:&nbsp;78*42*25mm</li><li>E-liquid&nbsp;Capacity: 13ml</li><li>Nicotine Strength: 5%</li><li>Battery Capacity: 650mAh</li><li>Puffs:&nbsp;6000</li><li>Rechargeable&nbsp;via USB-C</li><li>1A Charging Current</li><li>17W Max Power</li><li>Airflow Adjustable</li></ul><p>&nbsp;</p>",
+    additionalinfotitle2: "Shipping",
+    additionalinfodescription2: "<p>We ship&nbsp;to all of the United States</p>",
+    additionalinfotitle3: "Product Quantity",
+    additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
 ]
