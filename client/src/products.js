@@ -575,9 +575,134 @@ export const PRODUCTS = [
     additionalinfodescription3: `<ul> <li>1 gram of HHC infused Disposable</li> <li>Tested by third party labs for assurity of potency, safety, and accuracy <a href="https://i.ibb.co/1fkGkMZ/black-dog.jpg" target="_blank">[More info]</a></li></ul>`,
     additionalinfotitle4: "Product Quantity",
     additionalinfodescription4: "<p > </p><table><tbody><tr><td><p dir=ltr><strong>Quantity</strong> </p></td><td><p dir=ltr><strong> Specifics for each quantity</strong></p></td></tr><tr><td><p dir=ltr> Box</p></td><td><p dir=ltr>Contains 10 vapes in a Display box </p></td></tr><tr><td><p dir=ltr> Master</p></td><td><p dir=ltr> Contains 20 display boxes in a single master case, total vapes is 200</p></td></tr></tbody></table><p > </p>"
-    },
+  },
   {
     id: 25,
+    productName: "RUNTZ HHC SKYWALKER CARTRIDGE 1G",
+    price: 45,
+    options: [
+      { name: "Master Case", price: 1800 },
+      { name: "Display Box", price: 45 },
+    ],
+    defaultOptionName: "Display Box", 
+    category: [
+      "Disposable",
+      "HHC",
+      "Vape Category",
+      "HHC & D8 Disposable",
+      "Runtz Carts",
+      "Runtz"
+    ],
+    productImage: "https://i.ibb.co/2FTZ7sd/Runtz-HHC-Disposable-Vape-1-Gram-1-Edited-2-png.png",
+    description: "<p><strong>The Runtz HHC Skywalker Cartridge 1G</strong> is a premium vaping product that contains 1g of high-quality, full-spectrum oil. It has a delectable Skywalker flavor and is designed to fit in a compatible vape pen or battery. The cartridge is made with advanced technology, ensuring a smooth and enjoyable vaping experience.</p>",
+    brand: "HHC",
+    additionalinfotitle2: "Shipping",
+    additionalinfodescription2: "<p>We ship to all of the United States</p>",
+    additionalinfotitle3: "Product Quantity",
+    additionalinfodescription3: "<p > </p><table><tbody><tr><td><p dir=ltr><strong>Quantity</strong> </p></td><td><p dir=ltr><strong> Specifics for each quantity</strong></p></td></tr><tr><td><p dir=ltr> Box</p></td><td><p dir=ltr>Has 10 vapes cartridges in a Display box </p></td></tr><tr><td><p dir=ltr> Master</p></td><td><p dir=ltr>Contains 40 display boxes in a single master case, total vape cartridges is 400</p></td></tr></tbody></table><p > </p>"
+  },
+  {
+    id: 26,
+    productName: "RUNTZ HHC GHOST TRAIN HAZE CARTRIDGE 1G",
+    price: 45,
+    options: [
+      { name: "Master Case", price: 1800 },
+      { name: "Display Box", price: 45 },
+    ],
+    defaultOptionName: "Display Box", 
+    category: [
+      "Disposable",
+      "HHC",
+      "Vape Category",
+      "HHC & D8 Disposable",
+      "Runtz Carts",
+      "Runtz"
+    ],
+    productImage: "https://i.ibb.co/Qv3HQbw/Runtz-HHC-Disposable-Vape-1-Gram-1-Edited-png.png",
+    description: "<p><strong>The Runtz HHC Ghost Train Haze Cartridge 1G</strong> is a premium vaping product that contains 1g of high-quality, full-spectrum oil. It has a delectable Skywalker flavor and is designed to fit in a compatible vape pen or battery. The cartridge is made with advanced technology, ensuring a smooth and enjoyable vaping experience.</p>",
+    brand: "HHC",
+    additionalinfotitle2: "Shipping",
+    additionalinfodescription2: "<p>We ship to all of the United States</p>",
+    additionalinfotitle3: "Product Quantity",
+    additionalinfodescription3: "<p > </p><table><tbody><tr><td><p dir=ltr><strong>Quantity</strong> </p></td><td><p dir=ltr><strong> Specifics for each quantity</strong></p></td></tr><tr><td><p dir=ltr> Box</p></td><td><p dir=ltr>Has 10 vapes cartridges in a Display box </p></td></tr><tr><td><p dir=ltr> Master</p></td><td><p dir=ltr>Contains 40 display boxes in a single master case, total vape cartridges is 400</p></td></tr></tbody></table><p > </p>"
+  },
+  {
+    id: 27,
+    productName: "RUNTZ HHC AK 47 CARTRIDGE 1G",
+    price: 45,
+    options: [
+      { name: "Master Case", price: 1800 },
+      { name: "Display Box", price: 45 },
+    ],
+    defaultOptionName: "Display Box", 
+    category: [
+      "Disposable",
+      "HHC",
+      "Vape Category",
+      "HHC & D8 Disposable",
+      "Runtz Carts",
+      "Runtz"
+    ],
+    productImage: "https://i.ibb.co/1vSG5Tx/Runtz-HHC-Disposable-Vape-1-Gram-1-Edited-3-png.png",
+    description: "<p><strong>The Runtz HHC AK 47 Cartridge 1G</strong> is a premium vaping product that contains 1g of high-quality, full-spectrum oil. It has a delectable Skywalker flavor and is designed to fit in a compatible vape pen or battery. The cartridge is made with advanced technology, ensuring a smooth and enjoyable vaping experience.</p>",
+    brand: "HHC",
+    additionalinfotitle2: "Shipping",
+    additionalinfodescription2: "<p>We ship to all of the United States</p>",
+    additionalinfotitle3: "Product Quantity",
+    additionalinfodescription3: "<p > </p><table><tbody><tr><td><p dir=ltr><strong>Quantity</strong> </p></td><td><p dir=ltr><strong> Specifics for each quantity</strong></p></td></tr><tr><td><p dir=ltr> Box</p></td><td><p dir=ltr>Has 10 vapes cartridges in a Display box </p></td></tr><tr><td><p dir=ltr> Master</p></td><td><p dir=ltr>Contains 40 display boxes in a single master case, total vape cartridges is 400</p></td></tr></tbody></table><p > </p>"
+  },
+  {
+    id: 28,
+    productName: "RUNTZ HHC GREEN CRACK CARTRIDGE 1G",
+    price: 45,
+    options: [
+      { name: "Master Case", price: 1800 },
+      { name: "Display Box", price: 45 },
+    ],
+    defaultOptionName: "Display Box", 
+    category: [
+      "Disposable",
+      "HHC",
+      "Vape Category",
+      "HHC & D8 Disposable",
+      "Runtz Carts",
+      "Runtz"
+    ],
+    productImage: "https://i.ibb.co/vP0yh04/Runtz-HHC-Disposable-Vape-1-Gram-1-Edited-5-png.png",
+    description: "<p><strong>The Runtz HHC Green Crack Cartridge 1G</strong> is a premium vaping product that contains 1g of high-quality, full-spectrum oil. It has a delectable Skywalker flavor and is designed to fit in a compatible vape pen or battery. The cartridge is made with advanced technology, ensuring a smooth and enjoyable vaping experience.</p>",
+    brand: "HHC",
+    additionalinfotitle2: "Shipping",
+    additionalinfodescription2: "<p>We ship to all of the United States</p>",
+    additionalinfotitle3: "Product Quantity",
+    additionalinfodescription3: "<p > </p><table><tbody><tr><td><p dir=ltr><strong>Quantity</strong> </p></td><td><p dir=ltr><strong> Specifics for each quantity</strong></p></td></tr><tr><td><p dir=ltr> Box</p></td><td><p dir=ltr>Has 10 vapes cartridges in a Display box </p></td></tr><tr><td><p dir=ltr> Master</p></td><td><p dir=ltr>Contains 40 display boxes in a single master case, total vape cartridges is 400</p></td></tr></tbody></table><p > </p>"
+  },
+  {
+    id: 29,
+    productName: "RUNTZ HHC BLACK DOG CARTRIDGE 1G",
+    price: 45,
+    options: [
+      { name: "Master Case", price: 1800 },
+      { name: "Display Box", price: 45 },
+    ],
+    defaultOptionName: "Display Box", 
+    category: [
+      "Disposable",
+      "HHC",
+      "Vape Category",
+      "HHC & D8 Disposable",
+      "Runtz Carts",
+      "Runtz"
+    ],
+    productImage: "https://i.ibb.co/YZjSFYj/Runtz-HHC-Disposable-Vape-1-Gram-1-Edited-4-png.png",
+    description: "<p><strong>The Runtz HHC Black Dog Cartridge 1G</strong> is a premium vaping product that contains 1g of high-quality, full-spectrum oil. It has a delectable Skywalker flavor and is designed to fit in a compatible vape pen or battery. The cartridge is made with advanced technology, ensuring a smooth and enjoyable vaping experience.</p>",
+    brand: "HHC",
+    additionalinfotitle2: "Shipping",
+    additionalinfodescription2: "<p>We ship to all of the United States</p>",
+    additionalinfotitle3: "Product Quantity",
+    additionalinfodescription3: "<p > </p><table><tbody><tr><td><p dir=ltr><strong>Quantity</strong> </p></td><td><p dir=ltr><strong> Specifics for each quantity</strong></p></td></tr><tr><td><p dir=ltr> Box</p></td><td><p dir=ltr>Has 10 vapes cartridges in a Display box </p></td></tr><tr><td><p dir=ltr> Master</p></td><td><p dir=ltr>Contains 40 display boxes in a single master case, total vape cartridges is 400</p></td></tr></tbody></table><p > </p>"
+  },
+  {
+    id: 30,
     productName: "Runtz D8 Golden Disposable 1G",
     price: 80,
     options: [
@@ -603,7 +728,7 @@ export const PRODUCTS = [
     additionalinfodescription4: "<p > </p><table><tbody><tr><td><p dir=ltr><strong>Quantity</strong> </p></td><td><p dir=ltr><strong> Specifics for each quantity</strong></p></td></tr><tr><td><p dir=ltr> Box</p></td><td><p dir=ltr>Contains 10 vapes in a Display box </p></td></tr><tr><td><p dir=ltr> Master</p></td><td><p dir=ltr> Contains 20 display boxes in a single master case, total vapes is 200</p></td></tr></tbody></table><p > </p>"
   },
   {
-    id: 26,
+    id: 31,
     productName: "Runtz D8 OG Disposable Vape 1G",
     price: 30,
     options: [
@@ -629,7 +754,7 @@ export const PRODUCTS = [
     additionalinfodescription4: "<p > </p><table><tbody><tr><td><p dir=ltr><strong>Quantity</strong> </p></td><td><p dir=ltr><strong> Specifics for each quantity</strong></p></td></tr><tr><td><p dir=ltr> Box</p></td><td><p dir=ltr>Contains 10 vapes in a Display box </p></td></tr><tr><td><p dir=ltr> Master</p></td><td><p dir=ltr> Contains 20 display boxes in a single master case, total vapes is 200</p></td></tr></tbody></table><p > </p>"
   },
   {
-    id: 27,
+    id: 32,
     productName: "Runtz D8 Skywalker Disposable Vape 1G",
     price: 30,
     options: [
@@ -655,7 +780,7 @@ export const PRODUCTS = [
     additionalinfodescription4: "<p > </p><table><tbody><tr><td><p dir=ltr><strong>Quantity</strong> </p></td><td><p dir=ltr><strong> Specifics for each quantity</strong></p></td></tr><tr><td><p dir=ltr> Box</p></td><td><p dir=ltr>Contains 10 vapes in a Display box </p></td></tr><tr><td><p dir=ltr> Master</p></td><td><p dir=ltr> Contains 20 display boxes in a single master case, total vapes is 200</p></td></tr></tbody></table><p > </p>"
   },
   {
-    id: 28,
+    id: 33,
     productName: "Runtz D8 Blue Dream Disposable Vape",
     price: 30,
     options: [
@@ -681,7 +806,7 @@ export const PRODUCTS = [
     additionalinfodescription4: "<p > </p><table><tbody><tr><td><p dir=ltr><strong>Quantity</strong> </p></td><td><p dir=ltr><strong> Specifics for each quantity</strong></p></td></tr><tr><td><p dir=ltr> Box</p></td><td><p dir=ltr>Contains 10 vapes in a Display box </p></td></tr><tr><td><p dir=ltr> Master</p></td><td><p dir=ltr> Contains 20 display boxes in a single master case, total vapes is 200</p></td></tr></tbody></table><p > </p>"
   },
   {
-    id: 29,
+    id: 34,
     productName: "Runtz D8 Sour Diesel Disposable Vape 1G",
     price: 30,
     options: [
@@ -707,7 +832,7 @@ export const PRODUCTS = [
     additionalinfodescription4: "<p > </p><table><tbody><tr><td><p dir=ltr><strong>Quantity</strong> </p></td><td><p dir=ltr><strong> Specifics for each quantity</strong></p></td></tr><tr><td><p dir=ltr> Box</p></td><td><p dir=ltr>Contains 10 vapes in a Display box </p></td></tr><tr><td><p dir=ltr> Master</p></td><td><p dir=ltr> Contains 20 display boxes in a single master case, total vapes is 200</p></td></tr></tbody></table><p > </p>"
   },
   {
-    id: 30,
+    id: 35,
     productName: "Runtz D8 Wedding Cake Disposable Vape 1G",
     price: 30,
     options: [
@@ -739,7 +864,7 @@ export const PRODUCTS = [
     additionalinfodescription4: "<p > </p><table><tbody><tr><td><p dir=ltr><strong>Quantity</strong> </p></td><td><p dir=ltr><strong> Specifics for each quantity</strong></p></td></tr><tr><td><p dir=ltr> Box</p></td><td><p dir=ltr>Contains 10 vapes in a Display box </p></td></tr><tr><td><p dir=ltr> Master</p></td><td><p dir=ltr> Contains 20 display boxes in a single master case, total vapes is 200</p></td></tr></tbody></table><p > </p>"
   },
   {
-    id: 31,
+    id: 36,
     productName: "RUNTZ Delta 8 SKYWALKER CARTRIDGE 1G",
     price: 45,
     options: [
@@ -764,7 +889,7 @@ export const PRODUCTS = [
     additionalinfodescription3: "<p > </p><table><tbody><tr><td><p dir=ltr><strong>Quantity</strong> </p></td><td><p dir=ltr><strong> Specifics for each quantity</strong></p></td></tr><tr><td><p dir=ltr> Box</p></td><td><p dir=ltr>Has 10 vapes cartridges in a Display box </p></td></tr><tr><td><p dir=ltr> Master</p></td><td><p dir=ltr>Contains 40 display boxes in a single master case, total vape cartridges is 400</p></td></tr></tbody></table><p > </p>"
   },
   {
-    id: 32,
+    id: 37,
     productName: "RUNTZ Delta 8 Golden CARTRIDGE 1G",
     price: 45,
     options: [
@@ -789,7 +914,7 @@ export const PRODUCTS = [
     additionalinfodescription3: `<p> </p><table><tbody><tr><td><p dir=ltr><strong>Quantity</strong> </p></td><td><p dir=ltr><strong> Specifics for each quantity</strong></p></td></tr><tr><td><p dir=ltr> Box</p></td><td><p dir=ltr>Has 10 vape cartridges in a Display box </p></td></tr><tr><td><p dir=ltr> Master</p></td><td><p dir=ltr>Contains 40 display boxes in a single master case, total vape cartridges is 400</p></td></tr></tbody></table><p> </p>`
   },
   {
-    id: 33,
+    id: 38,
     productName: "Runtz D8 OG Cartridge Vape 1G",
     price: 45,
     options: [
@@ -813,7 +938,7 @@ export const PRODUCTS = [
     additionalinfodescription3: `<p> </p><table><tbody><tr><td><p dir=ltr><strong>Quantity</strong> </p></td><td><p dir=ltr><strong> Specifics for each quantity</strong></p></td></tr><tr><td><p dir=ltr> Box</p></td><td><p dir=ltr>Has 10 vape cartridges in a Display box </p></td></tr><tr><td><p dir=ltr> Master</p></td><td><p dir=ltr>Contains 40 display boxes in a single master case, total vape cartridges is 400</p></td></tr></tbody></table><p> </p>`
   },
   {
-    id: 34,
+    id: 39,
     productName: "Runtz D8 Wedding Cake Cartridge Vape 1G",
     price: 45,
     options: [
@@ -837,7 +962,7 @@ export const PRODUCTS = [
     additionalinfodescription3: `<p> </p><table><tbody><tr><td><p dir=ltr><strong>Quantity</strong> </p></td><td><p dir=ltr><strong> Specifics for each quantity</strong></p></td></tr><tr><td><p dir=ltr> Box</p></td><td><p dir=ltr>Has 10 vape cartridges in a Display box </p></td></tr><tr><td><p dir=ltr> Master</p></td><td><p dir=ltr>Contains 40 display boxes in a single master case, total vape cartridges is 400</p></td></tr></tbody></table><p> </p>`
   },
   {
-    id: 35,
+    id: 40,
     productName: "Runtz D8 Blue Dream Cartridge Vape",
     price: 30,
     options: [
@@ -861,7 +986,7 @@ export const PRODUCTS = [
     additionalinfodescription3: `<p> </p><table><tbody><tr><td><p dir=ltr><strong>Quantity</strong> </p></td><td><p dir=ltr><strong> Specifics for each quantity</strong></p></td></tr><tr><td><p dir=ltr> Box</p></td><td><p dir=ltr>Has 10 vape cartridges in a Display box </p></td></tr><tr><td><p dir=ltr> Master</p></td><td><p dir=ltr>Contains 40 display boxes in a single master case, total vape cartridges is 400</p></td></tr></tbody></table><p> </p>`
   },
   {
-    id: 36,
+    id: 41,
     productName: "Runtz D8 Sour Diesel Cartridge Vape 1G",
     price: 30,
     options: [
@@ -885,24 +1010,7 @@ export const PRODUCTS = [
     additionalinfodescription3: `<p> </p><table><tbody><tr><td><p dir=ltr><strong>Quantity</strong> </p></td><td><p dir=ltr><strong> Specifics for each quantity</strong></p></td></tr><tr><td><p dir=ltr> Box</p></td><td><p dir=ltr>Has 10 vape cartridges in a Display box </p></td></tr><tr><td><p dir=ltr> Master</p></td><td><p dir=ltr>Contains 40 display boxes in a single master case, total vape cartridges is 400</p></td></tr></tbody></table><p> </p>`
   },
   {
-    id: 37,
-    productName: "SMOK NOVO BAR AL6000",
-    price: 55,
-    options: [
-      { name: "Master Case", price: 1100 },
-      { name: "Display Box", price: 55 }
-    ],
-    defaultOptionName: "Display Box",
-    category: [
-      "Vape Category",
-      "Disposables Vape"
-    ],
-    productImage: "https://i.ibb.co/1r2m89r/13-JPG.jpg",
-    description: "<p>Shop SMOK Novo Bar AL6000 Disposables, featuring 13mL of prefilled eJuice, 650mAh battery, and delivers up to 6000 puffs from 11 delicious flavors.</p><p>&nbsp;</p><p><strong>SMOK Novo Bar AL6000 Disposables Features:</strong></p><p>• Prefilled Capacity: 13mL<br>• Battery Capacity: 650mAh<br>• Max Puffs: 6000<br>• Nicotine Strength: 5% (50mg)<br>• Operation: Draw-Activated<br>• Heating Element: Mesh Coils<br>• Charging: Type-C Port<br>• Airflow: Bottom Switch<br>• E-Liquid Indicator Light<br>• Battery Life Indicator Light<br>• Chipset: DCOIL-AI6.0</p><p>&nbsp;</p><p><strong>&nbsp;</strong><br><strong>Available Options:</strong><br>Blue Razz Ice, Cherry Cola, Clear, Fresh Mint, Lemonade Chill, Mixed Berries, Mr. Pepper, Peach Ice, Raspberry Ice Tea, Root Beer, Strawnana, Strazz, Sundown, Watermelon Candy, White Gummy</p><p>&nbsp;</p><p>&nbsp;- Warning: This product contains nicotine</p><p>&nbsp;</p><p>&nbsp;</p>",
-    brand: ""
-  },
-  {
-    id: 38,
+    id: 42,
     productName: "SMOK NOVO BAR AL6000 - WATERMELON CANDY",
     price: 55,
     options: [
@@ -924,7 +1032,7 @@ export const PRODUCTS = [
     additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
-    id: 39,
+    id: 43,
     productName: "SMOK NOVO BAR AL6000 - ROOT BEER",
     price: 55,
     options: [
@@ -948,7 +1056,7 @@ export const PRODUCTS = [
     additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
-    id: 40,
+    id: 44,
     productName: "Blue Razz Ice",
     price: 55,
     options: [
@@ -971,7 +1079,7 @@ export const PRODUCTS = [
     additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
-    id: 41,
+    id: 45,
     productName: "SMOK NOVO BAR AL6000 - CHERRY COLA",
     price: 55,
     options: [
@@ -993,7 +1101,7 @@ export const PRODUCTS = [
     additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
-    id: 42,
+    id: 46,
     productName: "SMOK NOVO BAR AL6000 - FRESH MINT",
     price: 55,
     options: [
@@ -1016,7 +1124,7 @@ export const PRODUCTS = [
     additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
-    id: 43,
+    id: 47,
     productName: "SMOK NOVO BAR AL6000 - LEMONADE CHILL",
     price: 55,
     options: [
@@ -1039,7 +1147,7 @@ export const PRODUCTS = [
     additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
-    id: 44,
+    id: 48,
     productName: "SMOK NOVO BAR AL6000 - PEACH ICE",
     price: 55,
     options: [
@@ -1061,7 +1169,7 @@ export const PRODUCTS = [
     additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
-    id: 45,
+    id: 49,
     productName: "SMOK NOVO BAR AL6000 - STRAWNANA",
     price: 55,
     options: [
@@ -1084,7 +1192,7 @@ export const PRODUCTS = [
     additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
-    id: 46,
+    id: 50,
     productName: "SMOK NOVO BAR AL6000 - MR.PEPPER",
     price: 55,
     options: [
@@ -1107,7 +1215,7 @@ export const PRODUCTS = [
     additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
-    id: 47,
+    id: 51,
     productName: "SMOK NOVO BAR AL6000 - MIXED BERRIES",
     price: 55,
     options: [
@@ -1131,7 +1239,7 @@ export const PRODUCTS = [
     additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
-    id: 48,
+    id: 52,
     productName: "SMOK NOVO BAR AL6000 - STRAZZ",
     price: 55,
     options: [
@@ -1155,7 +1263,7 @@ export const PRODUCTS = [
     additionalinfodescription3: "<table>  <tbody>   <tr>    <td><strong>Quantiy</strong></td>    <td><strong>Specifics for each quantiy</strong></td>   </tr>   <tr>    <td>Master Case</td>    <td>&nbsp;Has 20 display boxes in a single master case, total vapes are 200</td>   </tr>   <tr>    <td>Display Box</td>    <td>Has 10 vapes in a Display Box</td>   </tr>  </tbody> </table> <p>&nbsp;</p>",
   },
   {
-    id: 49,
+    id: 53,
     productName: "SMOK NOVO BAR AL6000 - SUNDOWN",
     price: 55,
     options: [
