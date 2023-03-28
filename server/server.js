@@ -62,16 +62,18 @@ async function sendSMS(to, message) {
 }
 
 app.post('/send-email', async (req, res) => {
-  const { email, name, lastName, phoneNumber, address, cartItems, totalAmount } = req.body;
+  const { email, firstName, lastName, companyName, taxId, phoneNumber, address, cartItems, totalAmount } = req.body;
   console.log('Request body:', req.body);
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: `${email}, jackwhite5125@gmail.com`, 
-    subject: 'New Order',
+    to: `${email}, admon2118@gmail.com`, 
+    subject: `New Order from ${companyName}`,
     html: `
       <h1>New Order</h1>
-      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+      <p><strong>Company Name:</strong> ${companyName}</p>
+      <p><strong>Tax Id Number:</strong> ${taxId}</p>
       <p><strong>Phone Number:</strong> ${phoneNumber}</p>
       <p><strong>Shipping Address:</strong> ${address}</p>
       <p><strong>Email:</strong> ${email}</p>
@@ -99,7 +101,9 @@ app.post('/send-email', async (req, res) => {
     res.send('Email sent successfully');
     const smsMessage = `
     New Order
-    Name: ${name} ${lastName}
+    Name: ${firstName} ${lastName}
+    Company: ${companyName}
+    Tax Id Number: ${taxId}
     Phone Number: ${phoneNumber}
     Shipping Address: ${address}
     Email: ${email}
@@ -108,6 +112,8 @@ app.post('/send-email', async (req, res) => {
     ${formatCartItemsForSMS(cartItems)}
     `;
         sendSMS('+12487945509', smsMessage);
+        sendSMS('+12484390211', smsMessage);
+        sendSMS('+18003793133', smsMessage);
       } catch (error) {
         console.error('Failed to send email:', error);
         res.status(500).send('Failed to send email');

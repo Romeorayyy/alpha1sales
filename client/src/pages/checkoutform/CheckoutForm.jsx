@@ -6,7 +6,10 @@ import { PRODUCTS } from "../../products";
 
 const CheckoutForm = () => {
   const { cartItems, getTotalCartAmount, checkout } = useContext(ShopContext);
-  const [name, setName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [taxId, setTaxId] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [address, setAddress] = useState("");
@@ -24,7 +27,10 @@ const CheckoutForm = () => {
     const totalAmount = getTotalCartAmount();
 
     const payload = {
-      name,
+      firstName,
+      lastName,
+      taxId,
+      companyName,
       email,
       phoneNumber,
       address,
@@ -57,15 +63,43 @@ const CheckoutForm = () => {
     <div className="checkout-form">
       <h1>Checkout</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
+        <label htmlFor="first-name">First Name:</label>
         <input
           type="text"
-          id="name"
+          id="first-name"
           placeholder="Enter your name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
           required
         />
+        <label htmlFor="last-name">Last Name:</label>
+        <input
+          type="text"
+          id="last-name"
+          placeholder="Enter your name"
+          value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
+          required
+        />
+        <label htmlFor="company-name">Company Name:</label>
+        <input
+          type="text"
+          id="company-name"
+          placeholder="Enter your company name"
+          value={companyName}
+          onChange={(e) => setCompanyName(e.target.value)}
+          required
+        />
+        <label htmlFor="tax-id">Tax Id Number:</label>
+        <input
+          type="number"
+          id="tax-id"
+          placeholder="Enter your Tax Id Number"
+          value={taxId}
+          onChange={(e) => setTaxId(e.target.value)}
+          required
+          pattern="\d+"
+          />
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -74,17 +108,18 @@ const CheckoutForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-        />
+          />
         <label htmlFor="phone-number">Phone number:</label>
         <input
-          type="tel"
+          type="text"
           id="phone-number"
           placeholder="Enter your phone number"
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
           required
+          pattern="\d+"
         />
-        <label htmlFor="address">Address:</label>
+        <label htmlFor="address">Shipping Address:</label>
         <input
           type="tel"
           id="address"
