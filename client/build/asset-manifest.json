@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.ad978101.css",
+    "main.css": "/static/css/main.75eda8ef.css",
     "main.js": "/static/js/main.ea86312e.js",
     "static/media/video.mp4": "/static/media/video.2a60d9b1880830a39186.mp4",
     "static/media/logo-alpha1sales.png": "/static/media/logo-alpha1sales.25548b758c098bd68300.png",
     "index.html": "/index.html",
-    "main.ad978101.css.map": "/static/css/main.ad978101.css.map",
+    "main.75eda8ef.css.map": "/static/css/main.75eda8ef.css.map",
     "main.ea86312e.js.map": "/static/js/main.ea86312e.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad978101.css",
+    "static/css/main.75eda8ef.css",
     "static/js/main.ea86312e.js"
   ]
 }
