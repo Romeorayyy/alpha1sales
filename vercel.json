@@ -26,6 +26,13 @@
           "Cache-Control": "public,max-age=0,must-revalidate"
         }
       }
-    ]
+    ],
+    "env": {
+      "EMAIL_USER": "@email_user",
+      "EMAIL_PASS": "@email_pass",
+      "TWILIO_ACCOUNT_SID": "@twilio_account_sid",
+      "TWILIO_AUTH_TOKEN": "@twilio_auth_token",
+      "TWILIO_PHONE_NUMBER": "@twilio_phone_number"
+    }
   }
   
