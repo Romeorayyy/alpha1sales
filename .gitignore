@@ -35,3 +35,4 @@ find.py
 yarn-build.py
 check-duplicate-css.py
 url-image.py
+.vercel

@@ -1,0 +1,31 @@
+{
+    "version": 2,
+    "public": true,
+    "builds": [
+      {
+        "src": "client/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "build"
+        }
+      },
+      {
+        "src": "server/api/index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/server/api/index.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/client/build/$1",
+        "headers": {
+          "Cache-Control": "public,max-age=0,must-revalidate"
+        }
+      }
+    ]
+  }
+  

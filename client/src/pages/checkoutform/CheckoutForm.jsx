@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
 import { useNavigate } from "react-router-dom";
-import "./checkoutform.css";
 import { PRODUCTS } from "../../products";
 
 const CheckoutForm = () => {
