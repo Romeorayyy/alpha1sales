@@ -20,12 +20,12 @@
       "dest": "/server/api/index.js"
     },
     {
-      "src": "/(.+)",
-      "dest": "/client/build/$1",
-      "headers": {
-        "Cache-Control": "public,max-age=0,must-revalidate"
-      }
-    }
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/client/build/index.html"
+    }    
   ],
   "env": {
     "EMAIL_USER": "@email_user",

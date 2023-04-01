@@ -119,14 +119,7 @@ app.post('/send-email', async (req, res) => {
         res.status(500).send('Failed to send email');
       }
     });
-    
-   // Serve the static files from the client/build folder
-app.use(express.static(path.join(__dirname, '../../client/build')));
-
-// Serve the index.html file for all other requests
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../client/build', 'index.html'));
-});
+  
 
     
     const PORT = process.env.PORT || 3001;
