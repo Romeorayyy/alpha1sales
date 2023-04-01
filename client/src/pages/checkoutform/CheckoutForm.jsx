@@ -56,6 +56,7 @@ const CheckoutForm = () => {
       }
     } catch (error) {
       console.error("Error:", error);
+      console.error("Error details:", error.message);
     }
   };
 
