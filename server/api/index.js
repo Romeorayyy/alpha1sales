@@ -120,14 +120,6 @@ app.post('/send-email', async (req, res) => {
       }
     });
     
-   // Serve the static files from the client/build folder
-app.use(express.static(path.join(__dirname, '../../client/build')));
-
-// Serve the index.html file for all other requests
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../client/build', 'index.html'));
-});
-
     
     const PORT = process.env.PORT || 3001;
     app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
