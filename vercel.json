@@ -37,7 +37,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/server/api/index.js"
+      "dest": "/client/build/$1"
     }
   ],
   "env": {
