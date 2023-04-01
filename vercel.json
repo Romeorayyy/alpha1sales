@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "server/api/send-email.mjs",
+      "src": "server/api/index.js",
       "use": "@vercel/node"
     },
     {
@@ -15,9 +15,8 @@
   ],
   "routes": [
     {
-      "src": "/api/send-email",
-      "dest": "/server/api/send-email.mjs",
-      "methods": ["post"]
+      "src": "/api/(.*)",
+      "dest": "server/api/index.js"
     },
     {
       "src": "/(.*)",

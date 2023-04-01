@@ -1,9 +1,9 @@
-import dotenv from 'dotenv';
-import path from 'path';
-import nodemailer from 'nodemailer';
-import cors from 'cors';
-import twilio from 'twilio';
-
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '../../.env.local') });
+const express = require('express');
+const nodemailer = require('nodemailer');
+const cors = require('cors');
+const twilio = require('twilio');
 
 const app = express();
 app.use(express.json());
@@ -61,7 +61,7 @@ async function sendSMS(to, message) {
   }
 }
 
-export default async function (req, res) {
+app.post('/send-email', async (req, res) => {
   const { email, firstName, lastName, companyName, taxId, phoneNumber, address, cartItems, totalAmount } = req.body;
   console.log('Request body:', req.body);
 
@@ -119,7 +119,7 @@ export default async function (req, res) {
         console.error('Error details:', error.message);
         res.status(500).send('Failed to send email');
       }
-    };
+    });
     
    // Serve the static files from the client/build folder
 app.use(express.static(path.join(__dirname, '../../client/build')));
@@ -132,9 +132,4 @@ app.get('*', (req, res) => {
     
     const PORT = process.env.PORT || 3001;
     app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
-    
-    if (req.method !== 'POST') {
-      res.status(405).send('Method Not Allowed');
-      return;
-    }
     
