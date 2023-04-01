@@ -11,12 +11,12 @@
   ],
   "routes": [
     {
-      "src": "/send-email",
-      "dest": "/api/send-email"
+      "src": "/api/send-email",
+      "dest": "/send-email"
     },
     {
       "src": "/(.*)",
-      "dest": "/client/build/index.html"
+      "dest": "/client/build/$1"
     }
   ]
 }
