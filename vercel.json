@@ -32,6 +32,10 @@
       "dest": "/client/build/manifest.json"
     },
     {
+      "src": "/robots.txt",
+      "dest": "/client/build/robots.txt"
+    },
+    {
       "src": "/asset-manifest.json",
       "dest": "/client/build/asset-manifest.json"
     },
