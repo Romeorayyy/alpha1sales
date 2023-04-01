@@ -17,7 +17,7 @@
     {
       "src": "/api/send-email",
       "dest": "server/api/index.js",
-      "methods": ["POST"]
+      "methods": ["post"]
     },
     {
       "src": "/(.*)",
