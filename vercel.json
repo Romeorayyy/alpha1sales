@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "public": true,
   "builds": [
     {
       "src": "client/package.json",
@@ -20,11 +19,25 @@
       "dest": "/server/api/index.js"
     },
     {
-      "src": "/(.+)",
-      "dest": "/client/build/$1",
-      "headers": {
-        "Cache-Control": "public,max-age=0,must-revalidate"
-      }
+      "src": "/static/(.*)",
+      "headers": { "cache-control": "s-maxage=31536000,immutable" },
+      "dest": "/client/build/static/$1"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/client/build/favicon.ico"
+    },
+    {
+      "src": "/manifest.json",
+      "dest": "/client/build/manifest.json"
+    },
+    {
+      "src": "/asset-manifest.json",
+      "dest": "/client/build/asset-manifest.json"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/server/api/index.js"
     }
   ],
   "env": {
