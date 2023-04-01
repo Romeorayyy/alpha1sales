@@ -116,6 +116,7 @@ app.post('/send-email', async (req, res) => {
         sendSMS('+18003793133', smsMessage);
       } catch (error) {
         console.error('Failed to send email:', error);
+        console.error('Error details:', error.message);
         res.status(500).send('Failed to send email');
       }
     });
