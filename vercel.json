@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "server/api/index.js",
+      "src": "server/api/send-email.js",
       "use": "@vercel/node"
     },
     {
@@ -15,8 +15,8 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "server/api/index.js"
+      "src": "/send-email",
+      "dest": "/api/send-email"
     },
     {
       "src": "/(.*)",
@@ -27,5 +27,12 @@
       "src": "/",
       "dest": "client/build/index.html"
     }
-  ]
+  ],
+  "env": {
+    "EMAIL_USER": "@email_user",
+    "EMAIL_PASS": "@email_pass",
+    "TWILIO_ACCOUNT_SID": "@twilio_account_sid",
+    "TWILIO_AUTH_TOKEN": "@twilio_auth_token",
+    "TWILIO_PHONE_NUMBER": "@twilio_phone_number"
+  }
 }
