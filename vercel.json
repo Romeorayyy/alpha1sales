@@ -19,19 +19,9 @@
       "dest": "/server/api/index.js"
     },
     {
-      "src": "/static/js/(.*)",
+      "src": "/static/(.*)",
       "headers": { "cache-control": "s-maxage=31536000,immutable" },
-      "dest": "/client/build/static/js/$1"
-    },
-    {
-      "src": "/static/css/(.*)",
-      "headers": { "cache-control": "s-maxage=31536000,immutable" },
-      "dest": "/client/build/static/css/$1"
-    },
-    {
-      "src": "/static/media/(.*)",
-      "headers": { "cache-control": "s-maxage=31536000,immutable" },
-      "dest": "/client/build/static/media/$1"
+      "dest": "/client/build/static/$1"
     },
     {
       "src": "/favicon.ico",
@@ -44,12 +34,10 @@
     {
       "src": "/asset-manifest.json",
       "dest": "/client/build/asset-manifest.json"
-    }
-  ],
-  "rewrites": [
+    },
     {
-      "source": "/(.*)",
-      "destination": "/client/build/index.html"
+      "src": "/(.*)",
+      "dest": "/server/api/index.js"
     }
   ],
   "env": {
