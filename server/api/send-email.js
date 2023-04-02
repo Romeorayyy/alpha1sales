@@ -3,7 +3,6 @@ const nodemailer = require('nodemailer');
 const twilio = require('twilio');
 const { parse } = require('url');
 
-// serverless function is here
 require('dotenv').config({ path: path.join(__dirname, '../../.env.local') });
 
 const transporter = nodemailer.createTransport({
@@ -132,4 +131,3 @@ try {
   res.status(500).send('Failed to send email');
 }
 };
-
