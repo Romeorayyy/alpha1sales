@@ -1,13 +1,9 @@
 const path = require('path');
-require('dotenv').config({ path: path.join(__dirname, '../../.env.local') });
-const express = require('express');
 const nodemailer = require('nodemailer');
-const cors = require('cors');
 const twilio = require('twilio');
+const { parse } = require('url');
 
-const app = express();
-app.use(express.json());
-app.use(cors());
+require('dotenv').config({ path: path.join(__dirname, '../../.env.local') });
 
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
@@ -61,9 +57,24 @@ async function sendSMS(to, message) {
   }
 }
 
-app.post('/send-email', async (req, res) => {
+module.exports = async (req, res) => {
+  const { method } = req;
+
+  if (method === 'OPTIONS') {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    res.status(200).end();
+    return;
+  }
+
+  if (method !== 'POST') {
+    res.status(405).send('Method Not Allowed');
+    return;
+  }
+
+  const { query } = parse(req.url, true);
   const { email, firstName, lastName, companyName, taxId, phoneNumber, address, cartItems, totalAmount } = req.body;
-  console.log('Request body:', req.body);
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
@@ -80,26 +91,26 @@ app.post('/send-email', async (req, res) => {
       <p><strong>Total Amount:</strong> $${totalAmount.toFixed(2)}</p>
       <h2>Items:</h2>
       <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
-        <thead>
-          <tr>
-            <th>Image</th>
-            <th>Product Name</th>
-            <th>Option</th>
-            <th>Quantity</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${formatCartItems(cartItems)}
-        </tbody>
-      </table>
-    `,
-  };
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Product Name</th>
+          <th>Option</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${formatCartItems(cartItems)}
+      </tbody>
+    </table>
+  `,
+};
 
-  try {
-    await transporter.sendMail(mailOptions);
-    res.send('Email sent successfully');
-    const smsMessage = `
+try {
+  await transporter.sendMail(mailOptions);
+  res.send('Email sent successfully');
+  const smsMessage = `
     New Order
     Name: ${firstName} ${lastName}
     Company: ${companyName}
@@ -110,26 +121,14 @@ app.post('/send-email', async (req, res) => {
     Total Amount: $${totalAmount.toFixed(2)}
     Items:
     ${formatCartItemsForSMS(cartItems)}
-    `;
-        sendSMS('+12487945509', smsMessage);
-        sendSMS('+12484390211', smsMessage);
-        sendSMS('+18003793133', smsMessage);
-      } catch (error) {
-        console.error('Failed to send email:', error);
-        console.error('Error details:', error.message);
-        res.status(500).send('Failed to send email');
-      }
-    });
-    
-   // Serve the static files from the client/build folder
-app.use(express.static(path.join(__dirname, '../../client/build')));
+  `;
+  sendSMS('+12487945509', smsMessage);
+  sendSMS('+12484390211', smsMessage);
+  sendSMS('+18003793133', smsMessage);
+} catch (error) {
+  console.error('Failed to send email:', error);
+  console.error('Error details:', error.message);
+  res.status(500).send('Failed to send email');
+}
+};
 
-// Serve the index.html file for all other requests
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../client/build', 'index.html'));
-});
-
-    
-    const PORT = process.env.PORT || 3001;
-    app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
-    
