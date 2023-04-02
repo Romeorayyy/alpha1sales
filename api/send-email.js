@@ -64,6 +64,12 @@ module.exports = async (req, res) => {
 
   const { method } = req;
 
+  // Add this block to handle OPTIONS requests
+  if (method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+
   const { query } = parse(req.url, true);
   const { email, firstName, lastName, companyName, taxId, phoneNumber, address, cartItems, totalAmount } = req.body;
 

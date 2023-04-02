@@ -20,14 +20,19 @@
       "dest": "/api/$1.js"
     },
     {
-      "src": "/(?!api)(.*)",
-      "dest": "/client/build/index.html",
-      "continue": true
+      "src": "/static/(.*)",
+      "headers": { "cache-control": "public,max-age=31536000,immutable" },
+      "dest": "/client/build/static/$1"
     },
     {
-      "src": "(.*)",
-      "headers": { "cache-control": "public,max-age=0,must-revalidate" },
-      "dest": "/client/build$1"
+      "src": "/(.*\\.(css|js|ico))",
+      "headers": { "cache-control": "public,max-age=31536000,immutable" },
+      "dest": "/client/build/$1"
+    },
+    {
+      "src": "/(?!api|static)(.*)",
+      "dest": "/client/build/index.html",
+      "continue": true
     }
-  ]
+  ]  
 }
