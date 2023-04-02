@@ -10,7 +10,11 @@
       }
     },
     {
-      "src": "api/**/*.js",
+      "src": "api/send-email.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "api/index.js",
       "use": "@vercel/node"
     }
   ],
