@@ -15,7 +15,7 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
+      "src": "/api/send-email",
       "dest": "server/api/send-email.js"
     },
     {
@@ -27,7 +27,7 @@
       "src": "/",
       "dest": "client/build/index.html"
     }
-  ],
+  ],  
   "env": {
     "EMAIL_USER": "@email_user",
     "EMAIL_PASS": "@email_pass",
