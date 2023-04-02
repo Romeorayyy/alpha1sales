@@ -1,9 +1,13 @@
 import React from 'react';
+import { useEffect } from 'react';
 import './contact.css';
 import { useForm, ValidationError } from '@formspree/react';
 import { useNavigate } from 'react-router-dom';
 
 export const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [state, handleSubmit] = useForm("mpzejkkk");
   const navigate = useNavigate();
 
