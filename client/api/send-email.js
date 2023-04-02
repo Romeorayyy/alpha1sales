@@ -75,7 +75,7 @@ module.exports = async (req, res) => {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: email, 
+    to: `${email}, admon2118@gmail.com`,
     subject: `New Order from ${companyName}`,
     html: `
       <h1>New Order</h1>
