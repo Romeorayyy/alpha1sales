@@ -62,7 +62,8 @@ const CheckoutForm = () => {
 
   return (
     <div className="checkout-form">
-      <h1>Checkout</h1>
+      <h1>Request Wholesale Pricing</h1>
+      <small>Alpha1Sales only sells to authorized businesses. Fill out this form to request pricing. We'll review your request and get back to you. Thanks for your interest!</small>
       <form onSubmit={handleSubmit}>
         <label htmlFor="first-name">First Name:</label>
         <input

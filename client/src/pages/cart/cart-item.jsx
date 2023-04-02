@@ -25,7 +25,7 @@ export const CartItem = (props) => {
           <b>Quantity:</b>
           {quantity}
         </p>
-        <p> Price: ${price.toFixed(2)}</p>
+        <p style={{display: "none"}}> Price: ${price.toFixed(2)}</p>
       </div>
       <div className="countHandler">
         <button onClick={() => removeFromCart(id, selectedOption)}> - </button>

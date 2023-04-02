@@ -1,9 +1,8 @@
 const path = require('path');
-require('dotenv').config({ path: path.join(__dirname, '../../.env.local') });
+require('dotenv').config({ path: path.join(__dirname, '../../.env') });
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
-const twilio = require('twilio');
 
 const app = express();
 app.use(express.json());
@@ -16,11 +15,6 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASS,
   },
 });
-
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
-const twilioPhoneNumber = process.env.TWILIO_PHONE_NUMBER;
-const client = twilio(accountSid, authToken);
 
 const formatCartItems = (items) => {
   return Object.entries(items)
@@ -38,28 +32,6 @@ const formatCartItems = (items) => {
     })
     .join('');
 };
-
-const formatCartItemsForSMS = (items) => {
-  return Object.entries(items)
-    .map(([itemId, itemData]) => {
-      const { productName, optionName, option, quantity } = itemData;
-      return `${productName} - Option: ${optionName} - Quantity: ${quantity} - Price: $${option.price.toFixed(2)}`;
-    })
-    .join('\n');
-};
-
-async function sendSMS(to, message) {
-  try {
-    const result = await client.messages.create({
-      body: message,
-      from: twilioPhoneNumber,
-      to: to,
-    });
-    console.log('SMS sent successfully:', result);
-  } catch (error) {
-    console.error('Failed to send SMS:', error.message);
-  }
-}
 
 app.post('/send-email', async (req, res) => {
   const { email, firstName, lastName, companyName, taxId, phoneNumber, address, cartItems, totalAmount } = req.body;
@@ -99,37 +71,22 @@ app.post('/send-email', async (req, res) => {
   try {
     await transporter.sendMail(mailOptions);
     res.send('Email sent successfully');
-    const smsMessage = `
-    New Order
-    Name: ${firstName} ${lastName}
-    Company: ${companyName}
-    Tax Id Number: ${taxId}
-    Phone Number: ${phoneNumber}
-    Shipping Address: ${address}
-    Email: ${email}
-    Total Amount: $${totalAmount.toFixed(2)}
-    Items:
-    ${formatCartItemsForSMS(cartItems)}
-    `;
-        sendSMS('+12487945509', smsMessage);
-        sendSMS('+12484390211', smsMessage);
-        sendSMS('+18003793133', smsMessage);
-      } catch (error) {
-        console.error('Failed to send email:', error);
-        console.error('Error details:', error.message);
-        res.status(500).send('Failed to send email');
-      }
-    });
-    
-   // Serve the static files from the client/build folder
-app.use(express.static(path.join(__dirname, '../../client/build')));
+  } catch (error) {
+    console.error('Failed to send email:', error);
+    console.error('Error details:', error.message);
+    res.status(500).send('Failed to send email');
+  }
+});
+
+// Serve the static files from the client/build folder
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 // Serve the index.html file for all other requests
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
 
-    
-    const PORT = process.env.PORT || 3001;
-    app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
-    
+
+
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));

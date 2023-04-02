@@ -23,7 +23,7 @@ export const Product = (props) => {
           <p>
             <b>{productName}</b>
           </p>
-          <p> ${displayPrice}</p>
+          <p style={{display: "none"}}> ${displayPrice}</p>
         </div>
       </Link>
       <button className="addToCartBttn" onClick={() => addToCart(id, defaultOption)}>

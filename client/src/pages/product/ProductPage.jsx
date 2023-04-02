@@ -78,7 +78,7 @@ const ProductPage = () => {
         <h3>{product.productName}</h3>
         <div dangerouslySetInnerHTML={{ __html: product.description }}></div>
         <p>
-          <b>Price:</b> ${selectedOption.price.toFixed(2)}
+          <b style={{display: "none"}}>Price:</b> {/*selectedOption.price.toFixed(2)*/}
         </p>
         {product.options && (
           <div className={styles.optionSelector}>

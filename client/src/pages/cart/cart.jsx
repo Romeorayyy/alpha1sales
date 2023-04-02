@@ -38,7 +38,7 @@ const Cart = () => {
           })}
         </div>
         <div className="cart-total">
-          <h2>Total: ${getTotalCartAmount().toFixed(2)}</h2>
+          <h2 style={{display: "none"}}>Total: {/*getTotalCartAmount().toFixed(2)*/}</h2>
           <CheckoutForm />
         </div>
       </div>
