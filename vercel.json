@@ -10,14 +10,14 @@
       }
     },
     {
-      "src": "api/send-email.js",
+      "src": "client/api/send-email.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/api/$1.js"
+      "dest": "/client/api/$1.js"
     },
     {
       "src": "/static/(.*)",
@@ -34,5 +34,5 @@
       "dest": "/client/build/index.html",
       "continue": true
     }
-  ]  
+  ]
 }
